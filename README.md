@@ -429,7 +429,7 @@ Discover more awesome lists at [sindresorhus/awesome](https://github.com/sindres
 
 ## ***Master***
 
-If you wish to acquire this knowledge, along with other topics related to malware analysis, reversing, and bug hunting, under the guidance of top-notch professionals, do not hesitate to get in touch with the institution where I am an instructor, offering a [master's program](https://www.campusciberseguridad.com/masters/master-en-reversing) in this field.
+If you wish to acquire this knowledge, along with other topics related to malware analysis, reversing, and bug hunting, under the guidance of top-notch professionals, do not hesitate to get in touch with the institution where I am an instructor, offering a [master's degree (Máster en Reversing, Análisis de Malware y Bug Hunting)](https://www.campusciberseguridad.com/masters/master-en-reversing) in this field.
 
 
 <p align="center">
