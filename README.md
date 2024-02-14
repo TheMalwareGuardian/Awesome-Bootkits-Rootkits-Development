@@ -15,6 +15,7 @@ Discover more awesome lists at [sindresorhus/awesome](https://github.com/sindres
 - [Rootkits](#rootkits)
 - [Books](#books)
 - [Awesome](#awesome)
+- [Master's Degree](#mastersdegree)
 
 
 
@@ -425,9 +426,9 @@ Discover more awesome lists at [sindresorhus/awesome](https://github.com/sindres
 
 
 
-<div id='master'/>
+<div id='mastersdegree'/>
 
-## ***Master***
+## ***Master's Degree***
 
 If you wish to acquire this knowledge, along with other topics related to malware analysis, reversing, and bug hunting, under the guidance of top-notch professionals, do not hesitate to get in touch with the institution where I am an instructor, offering a [master's degree (Máster en Reversing, Análisis de Malware y Bug Hunting)](https://www.campusciberseguridad.com/masters/master-en-reversing) in this field.
 
@@ -440,6 +441,6 @@ If you wish to acquire this knowledge, along with other topics related to malwar
     <img width="200px" src="images/UCAM.png" alt="UCAM">
   </span>
   <span style="vertical-align: middle;">
-    <img width="140px" src="images/Campus-Internacional-de-Ciberseguridad.png" alt="Campus Internacional de Ciberseguridad">
+    <img width="140px" src="images/Campus_Internacional_de_Ciberseguridad.png" alt="Campus Internacional de Ciberseguridad">
   </span>
 </p>
