@@ -3,7 +3,7 @@
 This script generates a bookmark HTML file from the links in the main README of the project.
 
 <p align="center">
-    <img width="" src="images/chrome.png" alt="Bookmarks">
+    <img width="" src="Images/chrome.png" alt="Bookmarks">
 </p>
 
 ### Requirements

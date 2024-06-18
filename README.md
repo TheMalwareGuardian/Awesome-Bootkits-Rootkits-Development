@@ -3,7 +3,7 @@
 A curated compilation of extensive resources dedicated to bootkit and rootkit development.
 
 <p align="center">
-  <img src="images/Logo.png">
+  <img src="Images/Logo.png">
 </p>
 
 
@@ -959,12 +959,12 @@ If you wish to acquire this knowledge, along with other topics related to malwar
 
 <p align="center">
   <span style="vertical-align: middle;">
-    <img width="200px" src="images/ENIIT.png" alt="ENIIT">
+    <img width="200px" src="Images/ENIIT.png" alt="ENIIT">
   </span>
   <span style="vertical-align: middle;">
-    <img width="200px" src="images/UCAM.png" alt="UCAM">
+    <img width="200px" src="Images/UCAM.png" alt="UCAM">
   </span>
   <span style="vertical-align: middle;">
-    <img width="140px" src="images/Campus_Internacional_de_Ciberseguridad.png" alt="Campus Internacional de Ciberseguridad">
+    <img width="140px" src="Images/Campus_Internacional_de_Ciberseguridad.png" alt="Campus Internacional de Ciberseguridad">
   </span>
 </p>
