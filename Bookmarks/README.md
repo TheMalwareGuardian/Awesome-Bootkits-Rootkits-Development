@@ -3,7 +3,7 @@
 This script generates a bookmark HTML file from the links in the main README of the project.
 
 <p align="center">
-    <img width="" src="Images/chrome.png" alt="Bookmarks">
+	<img width="" src="Images/chrome.png" alt="Bookmarks">
 </p>
 
 ### Requirements
@@ -14,32 +14,32 @@ To use this script, you need to have Python installed on your system. If you don
 ### Using the Script
 
 - Clone the Repository
-    - Clone the repository to your local machine using the following command:
+	- Clone the repository to your local machine using the following command:
 
-    ```
-    git clone https://github.com/TheMalwareGuardian/Awesome-Bootkits-Rootkits-Development
-    ```
+	```
+	git clone https://github.com/TheMalwareGuardian/Awesome-Bootkits-Rootkits-Development
+	```
 
 - Navigate to the Bookmarks Directory
-    - Change your directory to the bookmarks folder within the cloned repository:
-    ```
-    cd Awesome-Bootkits-Rootkits-Development/bookmarks
-    ```
+	- Change your directory to the bookmarks folder within the cloned repository:
+	```
+	cd Awesome-Bootkits-Rootkits-Development/bookmarks
+	```
 
 - Run the Script
-    - Execute the generate_bookmarks.py script to create the bookmarks file:
-    ```
-    python generate_bookmarks.py
+	- Execute the generate_bookmarks.py script to create the bookmarks file:
+	```
+	python generate_bookmarks.py
 
-    The bookmarks file is located at: C:\Awesome-Bootkits-Rootkits-Development\bookmarks\bookmarks.html    
-    352 links have been added to the bookmarks.
-    ```
+	The bookmarks file is located at: C:\Awesome-Bootkits-Rootkits-Development\bookmarks\bookmarks.html
+	419 links have been added to the bookmarks.
+	```
 
 - View the Generated Bookmarks
-    - Open the generated bookmarks.html file in a text editor to review:
-    ```
-    notepad bookmarks.html
-    ```
+	- Open the generated bookmarks.html file in a text editor to review:
+	```
+	notepad bookmarks.html
+	```
 
 ### Import
 
