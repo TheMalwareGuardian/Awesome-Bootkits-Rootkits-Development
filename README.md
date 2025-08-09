@@ -1,9 +1,11 @@
 # 🏴‍☠️ Awesome Bootkits & Rootkits Development
 
+![DEF CON 33 Main Stage Talk](https://img.shields.io/badge/DEF%20CON%2033-Main%20Stage%20Talk-informational?style=for-the-badge&logo=hackaday)
+
 A curated compilation of extensive resources dedicated to bootkit and rootkit development.
 
 <p align="center">
-<img src="Images/Logo_Awesome_Bootkits_Rootkits_Development.png">
+	<img src="Images/Logo_Awesome_Bootkits_Rootkits_Development.png">
 </p>
 
 
@@ -258,12 +260,14 @@ A curated compilation of extensive resources dedicated to bootkit and rootkit de
 
 Whoami
 
-* [Web Linkedin: Alejandro Vázquez Vázquez](https://www.linkedin.com/in/vazquez-vazquez-alejandro/) -> My Linkedin profile.
-* [Web Campus Internacional de Ciberseguridad: Máster en Reversing, Análisis de Malware y Bug Hunting](https://www.campusciberseguridad.com/masters/master-en-reversing) -> Master's Degree professor (Reverse Engineering, Malware Analysis and Bug Hunting).
+* [Web Linkedin: Alejandro Vazquez Vazquez (TheMalwareGuardian)](https://www.linkedin.com/in/vazquez-vazquez-alejandro/) -> My Linkedin profile.
+* [Web Linkedin: Maria San Jose (drkrysSrng)](https://www.linkedin.com/in/mariasanjose) -> Maria's Linkedin profile.
 * [Github: Awesome Bootkits & Rootkits Development](https://github.com/TheMalwareGuardian/Awesome-Bootkits-Rootkits-Development) -> A curated compilation of extensive resources dedicated to bootkit and rootkit development.
 * [Github: Bootkits & Rootkits Development Environment](https://github.com/TheMalwareGuardian/Bootkits-Rootkits-Development-Environment) -> Automated environment setup for Bootkit & Rootkit development.
-* [Github: UEFI Windows Bootkit](https://github.com/TheMalwareGuardian/Abismo) -> Abismo is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits.
-* [Github: Windows Kernel Mode Rootkit](https://github.com/TheMalwareGuardian/Bentico) -> Bentico is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits.
+* [Github: Abyss Windows UEFI Bootkit](https://github.com/TheMalwareGuardian/Abyss) -> Abyss is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits.
+* [Github: Benthic Windows Kernel Rootkit](https://github.com/TheMalwareGuardian/Benthic) -> Benthic is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits.
+* [Github: PKfail](https://github.com/TheMalwareGuardian/PKfail) -> PKfail is a summary and proof-of-concept project demonstrating how UEFI Secure Boot can be bypassed on platforms configured with test-signing keys as the Platform Key (PK), exposing a common misconfiguration that undermines platform integrity.
+* [Github: UEFI Firmware Analysis](https://github.com/TheMalwareGuardian/UEFI-Firmware-Analysis) -> A set of personal notes and practical steps to guide you through analyzing the UEFI firmware of your own hardware, including techniques to inspect, dump, and review firmware images for misconfigurations or potential weaknesses.
 * [Github: Hello WinDbg Scripting](https://github.com/TheMalwareGuardian/WinDbg_Scripting) -> This repository serves as a starting point for scripting in WinDbg, covering WinDbg native scripting, JavaScript, and PyKD (Python).
 
 
@@ -453,7 +457,7 @@ What is a bootkit exactly? Are they the elements you can develop with EDK2?
 
 * [Web Kaspersky: Bootkit](https://encyclopedia.kaspersky.com/glossary/bootkit/) -> A bootkit is a malicious program designed to load as early as possible in the boot process, in order to control all stages of the operating system start up, modifying system code and drivers before anti-virus and other security components are loaded. The malicious program is loaded from the Master Boot Record (MBR) or boot sector. In effect, a bootkit is a rootkit that loads before the operating system.
 * [Web CrowdStrike: Bootkit - Definition, Prevention, and Removal](https://www.crowdstrike.com/cybersecurity-101/malware/bootkit/) -> A strong cybersecurity strategy should not only include reactive approaches to cyberattacks, but should also include proactive prevention methods for infections such as bootkit. Mitigating the consequences of a bootkit infection and removing the infection are valuable tools for your cybersecurity team. Bootkits are stealthy, and understanding how they work and how to combat them can help keep your business safe from threat actors.
-* [Web Positive Technologies: Bootkits: evolution and detection methods](https://www.ptsecurity.com/ww-en/analytics/bootkits-evolution-and-methods-of-detection/) -> Bootkits were previously thought to exist mainly in proof-of-concept form, and not used in real attacks. However, only two years separated the appearance of the first PoC and the first bootkit attack.
+* [Web Positive Technologies: Bootkits: evolution and detection methods](https://global.ptsecurity.com/analytics/bootkits-evolution-and-methods-of-detection) -> Bootkits were previously thought to exist mainly in proof-of-concept form, and not used in real attacks. However, only two years separated the appearance of the first PoC and the first bootkit attack.
 
 
 <div id='bootkits-videos'/>
@@ -471,8 +475,12 @@ Watch these videos to learn what a bootkit is and the techniques used in its dev
 * [Paper: BlackHat USA 2014 - Exposing Bootkits with BIOS Emulation](https://www.blackhat.com/docs/us-14/materials/us-14-Haukli-Exposing-Bootkits-With-BIOS-Emulation-WP.pdf)
 * [Youtube Video: BlackHat USA 2014 - Exposing Bootkits with BIOS Emulation](https://www.youtube.com/watch?v=siMj4bFx5nI) -> Stealth and persistency are invaluable assets to an intruder. You cannot defend against what you cannot see. This talk discusses techniques to counter attempts at subverting modern security features, and regain control of compromised machines, by drilling down deep into internal structures of the operating system to battle the threat of bootkits.
 * [Youtube Video: Nullcon 2022 - A UEFI firmware bootkit in the wild](https://www.youtube.com/watch?v=lSpOFUCzFdk) -> Despite the advanced capabilities they provide, low-level implants such as bootkits and rootkits are only deployed by the most sophisticated attackers due to the risk they pose to the victim system's stability. In recent years, Kaspersky has however observed a number of new low-level malware, such as MosaicRegressor, MoonBounce, and the object of this talk, CosmicStrand.
+* [Presentation: RSA Conference - ESPecter, Showing the Future of UEFI Threats](https://static.rainfocus.com/rsac/us22/sess/1628600566532001BQMV/finalwebsite/2022_USA22_HT-M01_01_ESPecter-Showing-the-Future-of-UEFI-Threats_1654098813782001estI.pdf)
+* [Youtube Video: RSA Conference - ESPecter, Showing the Future of UEFI Threats](https://www.youtube.com/watch?v=rpfE78x7dD4) -> In recent years, it's become clear that UEFI threats are real and have been deployed in the wild. UEFI implants such as LoJax and MosaicRegressor have used the lowest level of persistence, SPI flash, but is it worth it? Actors behind ESPecter bootkit think that compromising the bootloader is the way. This session will explain why and how to protect against this and similar threats.
 * [Presentation: OffensiveCon18 - Alex Ionescu Advancing the State of UEFI Bootkits](http://publications.alex-ionescu.com/OffensiveCon/OffensiveCon%202018%20-%20Advancing%20the%20state%20of%20UEFI%20Boot%20Kits.pdf)
 * [Youtube Video: OffensiveCon18 - Alex Ionescu Advancing the State of UEFI Bootkits](https://www.youtube.com/watch?v=dpG97TBR3Ys) -> Persistence in the Age of PatchGuard and Windows 10.
+* [Presentation: RSA Conference - UEFI Bootkits and Where UEFI Security Fails](https://static.rainfocus.com/rsac/us24/sess/1697270793852001dpne/finalwebsite/2024_USA24_HTA-T09_01_UEFI-Bootkits-and-Where-UEFI-Security-Fails_1713983196427001MzOd.pdf)
+* [Youtube Video: RSA Conference - UEFI Bootkits and Where UEFI Security Fails](https://www.youtube.com/watch?v=X3YOKkTdj_k) -> The BlackLotus UEFI bootkit bypassed UEFI Secure Boot on Windows systems that were fully updated, by exploiting an old vulnerability that has been known and patched for over a year. How is that possible? Are there other such vulnerabilities? Join this session for a tour of UEFI threats, vulnerabilities, and issues with UEFI security, and learn what you can do to protect your systems.
 
 
 <div id='bootkits-analysis'/>
@@ -500,12 +508,12 @@ Gain a true understanding of this malware by reading its analyses.
 
 Observe that the components shown in the source code are the applications and drivers you can develop with EDK2.
 
-* [Github: Abismo](https://github.com/TheMalwareGuardian/Abismo) -> Abismo is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits. By offering a centralized repository of knowledge, Abismo stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
-* [Github: BlackLotus](https://github.com/ldpreload/BlackLotus) -> An innovative UEFI Bootkit designed specifically for Windows. It incorporates a built-in Secure Boot bypass and Ring0/Kernel protection to safeguard against any attempts at removal. This software serves the purpose of functioning as an HTTP Loader.
+* [Github: Abyss](https://github.com/TheMalwareGuardian/Abyss) -> Abyss is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits. By offering a centralized repository of knowledge, Abyss stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
+* [Github: RedLotus](https://github.com/memN0ps/bootkit-rs) -> Windows UEFI Bootkit in Rust designed to facilitate the manual mapping of a driver manual mapper before the kernel (ntoskrnl.exe) is loaded, effectively bypassing Driver Signature Enforcement (DSE).
 * [Github: EfiGuard](https://github.com/Mattiwatti/EfiGuard) -> Portable x64 UEFI bootkit that patches the Windows boot manager, boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
+* [Github: BlackLotus](https://github.com/ldpreload/BlackLotus) -> An innovative UEFI Bootkit designed specifically for Windows. It incorporates a built-in Secure Boot bypass and Ring0/Kernel protection to safeguard against any attempts at removal. This software serves the purpose of functioning as an HTTP Loader.
 * [Github: DmaBackdoorBoot](https://github.com/Cr4sh/s6_pcie_microblaze/tree/master/python/payloads/DmaBackdoorBoot) -> UEFI DXE driver intended for executing of kernel mode and user mode payloads under the Windows operating system by having an arbitrary code execution at early boot stage during DXE phase of the platform initialization.
 * [Github: Bootlicker](https://github.com/realoriginal/bootlicker) -> A generic UEFI bootkit used to achieve initial usermode execution.
-* [Github: RedLotus](https://github.com/memN0ps/bootkit-rs) -> Windows UEFI Bootkit in Rust designed to facilitate the manual mapping of a driver manual mapper before the kernel (ntoskrnl.exe) is loaded, effectively bypassing Driver Signature Enforcement (DSE).
 * [Github: Bootkit Showcase](https://github.com/hardenedvault/bootkit-samples) -> Real-World Examples of Infrastructure Security Threats.
 * [Github: SandboxBootkit](https://github.com/thesecretclub/SandboxBootkit) -> Bootkit tested on Windows Sandbox to patch ntoskrnl.exe and disable DSE/PatchGuard.
 * [Github: Umap](https://github.com/btbd/umap/) -> Windows UEFI bootkit that loads a generic driver manual mapper without using a UEFI runtime driver.
@@ -1026,7 +1034,7 @@ Watch these videos to understand how to develop this malware with advanced featu
 
 Complex examples of this malware.
 
-* [Github: Bentico](https://github.com/TheMalwareGuardian/Bentico) -> Bentico is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits. By offering a centralized repository of knowledge, Bentico stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
+* [Github: Benthic](https://github.com/TheMalwareGuardian/Benthic) -> Benthic is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits. By offering a centralized repository of knowledge, Benthic stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
 * [Github: Nidhogg](https://github.com/Idov31/Nidhogg) -> Nidhogg is a multi-functional rootkit to showcase the variety of operations that can be done from kernel space. The goal of Nidhogg is to provide an all-in-one and easy-to-use rootkit with multiple helpful functionalities for operations. Besides that, it can also easily be integrated with your C2 framework.
 * [Github: Black Angel](https://github.com/XaFF-XaFF/Black-Angel-Rootkit) -> lack Angel is a Windows 11/10 x64 kernel mode rootkit. Rootkit can be loaded with enabled DSE while maintaining its full functionality.
 * [Github: Cronos](https://github.com/XaFF-XaFF/Cronos-Rootkit) -> Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes, protect and elevate them with token manipulation.
@@ -1348,11 +1356,14 @@ Additional cybersecurity resources that will assist you in developing bootkits/r
 
 Key readings to excel in this field.
 
-* [Windows Internals - Russinovich, M., Solomon, D., Ionescu, A. & Yosifovich, P. - Microsoft Press. (Part 1: ≈$50, Part 2: ≈$50)](https://learn.microsoft.com/en-us/sysinternals/resources/windows-internals) -> Architecture and core internals of Windows.
-* [Beyond BIOS: Developing with the Unified Extensible Firmware Interface - Marisetty, S., Rothman, M., & Zimmer, V. - Intel Press. (≈$70)](https://www.amazon.com/Beyond-BIOS-Developing-Extensible-Interface/dp/1501514784) -> This book provides an overview of modern boot firmware, including the Unified Extensible Firmware Interface (UEFI) and its associated EFI Developer Kit II (EDKII) firmware.
 * [Rootkits and Bootkits: Reversing Modern Malware and Next Generation Threats - Matrosov, A., Rodionov, E., & Bratus, S. - No Starch Press. (≈$45)](https://www.amazon.com/Rootkits-Bootkits-Reversing-Malware-Generation/dp/1593277164) -> Rootkits and Bootkits will teach you how to understand and counter sophisticated, advanced threats buried deep in a machine's boot process or UEFI firmware.
+* [Windows Internals - Russinovich, M., Solomon, D., Ionescu, A. & Yosifovich, P. - Microsoft Press. (Part 1: ≈$50, Part 2: ≈$50)](https://learn.microsoft.com/en-us/sysinternals/resources/windows-internals) -> Architecture and core internals of Windows.
+* [Windows Kernel Programming - Pavel Yosifovich. (≈$40)](https://www.amazon.es/dp/B0BWWWG5ZV) -> There is nothing like the power of the kernel in Windows - but how do you write kernel drivers to take advantage of that power? This book will show you how.The book describes software kernel drivers programming for Windows. These drivers don't deal with hardware, but rather the system itself: processes, threads, modules, Registry and more. Kernel code can monitor important events, preventing some from occurring if needed. Various filters can be written that can intercept calls that a driver may be interested in. The second edition expands on existing topics, and adds chapters on advanced programming techniques, and the Windows Filtering Platform.
 * [The Rootkit Arsenal: Escape and Evasion in the Dark Corners of the System - Blunden, B. - Jones & Bartlett Learning. (≈$100)](https://www.amazon.com/Rootkit-Arsenal-Escape-Evasion-Corners/dp/144962636X) -> While forensic analysis has proven to be a valuable investigative tool in the field of computer security, utilizing anti-forensic technology makes it possible to maintain a covert operational foothold for extended periods, even in a high-security environment. Adopting an approach that favors full disclosure, the updated Second Edition of The Rootkit Arsenal presents the most accessible, timely, and complete coverage of forensic countermeasures.
 * [Rootkits: Subverting the Windows Kernel - Hoglund, G., & Butler, J. - Addison-Wesley. (≈$50)](https://www.amazon.com/Rootkits-Subverting-Windows-Greg-Hoglund/dp/0321294319) -> It's imperative that everybody working in the field of cyber-security read this book to understand the growing threat of rootkits.
+* [Beyond BIOS: Developing with the Unified Extensible Firmware Interface - Marisetty, S., Rothman, M., & Zimmer, V. - Intel Press. (≈$70)](https://www.amazon.com/Beyond-BIOS-Developing-Extensible-Interface/dp/1501514784) -> This book provides an overview of modern boot firmware, including the Unified Extensible Firmware Interface (UEFI) and its associated EFI Developer Kit II (EDKII) firmware.
+* [Windows Security Internals: A Deep Dive into Windows Authentication, Authorization, and Auditing -  James Forshaw - No Starch Press. (≈$50)](https://www.amazon.es/dp/B0CD3H2X5P) -> This book provides an overview of modern boot firmware, including the Unified Extensible Firmware Interface (UEFI) and its associated EFI Developer Kit II (EDKII) firmware.
+* [Evading EDR: The Definitive Guide to Defeating Endpoint Detection Systems -  Matt Hand - No Starch Press. (≈$50)](https://www.amazon.es/dp/1718503342) -> EDR, demystified! Stay a step ahead of attackers with this comprehensive guide to understanding the attack-detection software running on Microsoft systems-and how to evade it.
 
 
 ---
