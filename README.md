@@ -9,9 +9,11 @@ A curated compilation of extensive resources dedicated to bootkit and rootkit de
 </p>
 
 
+
 ---
 ---
 ---
+
 
 
 ## Table of Contents
@@ -47,6 +49,13 @@ A curated compilation of extensive resources dedicated to bootkit and rootkit de
 		<li><a href="#bootkits-videos">Videos</a></li>
 		<li><a href="#bootkits-analysis">Analysis</a></li>
 		<li><a href="#bootkits-source-code">Source Code</a></li>
+<details>
+	<summary>📂</summary>
+	<ul>
+		<li><a href="#bootkits-source-code-windows">Windows</a></li>
+		<li><a href="#bootkits-source-code-linux">Linux</a></li>
+	</ul>
+</details>
 	</ul>
 </details>
 	<li><a href="#windows-kernel">Windows Kernel</a></li>
@@ -154,6 +163,13 @@ A curated compilation of extensive resources dedicated to bootkit and rootkit de
 		<li><a href="#rootkits-videos">Videos</a></li>
 		<li><a href="#rootkits-analysis">Analysis</a></li>
 		<li><a href="#rootkits-source-code">Source Code</a></li>
+<details>
+	<summary>📂</summary>
+	<ul>
+		<li><a href="#rootkits-source-code-windows">Windows</a></li>
+		<li><a href="#rootkits-source-code-linux">Linux</a></li>
+	</ul>
+</details>
 		<li><a href="#rootkits-techniques">Techniques</a></li>
 <details>
 		<summary>📂</summary>
@@ -204,6 +220,14 @@ A curated compilation of extensive resources dedicated to bootkit and rootkit de
 				<li><a href="#rootkits-techniques-minifilter-pocs">PoCs</a></li>
 			</ul>
 </details>
+			<li><a href="#rootkits-techniques-callbacks">Remove Callbacks</a></li>
+<details>
+			<summary>📂</summary>
+			<ul>
+				<li><a href="#rootkits-techniques-callbacks-basics">Basics</a></li>
+				<li><a href="#rootkits-techniques-callbacks-pocs">PoCs</a></li>
+			</ul>
+</details>
 			<li><a href="#rootkits-techniques-certificates">Forge Signature Timestamps</a></li>
 <details>
 			<summary>📂</summary>
@@ -249,9 +273,11 @@ A curated compilation of extensive resources dedicated to bootkit and rootkit de
 </ul>
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='themalwareguardian'/>
@@ -264,16 +290,21 @@ Whoami
 * [Web Linkedin: Maria San Jose (drkrysSrng)](https://www.linkedin.com/in/mariasanjose) -> Maria's Linkedin profile.
 * [Github: Awesome Bootkits & Rootkits Development](https://github.com/TheMalwareGuardian/Awesome-Bootkits-Rootkits-Development) -> A curated compilation of extensive resources dedicated to bootkit and rootkit development.
 * [Github: Bootkits & Rootkits Development Environment](https://github.com/TheMalwareGuardian/Bootkits-Rootkits-Development-Environment) -> Automated environment setup for Bootkit & Rootkit development.
-* [Github: Abyss Windows UEFI Bootkit](https://github.com/TheMalwareGuardian/Abyss) -> Abyss is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits.
-* [Github: Benthic Windows Kernel Rootkit](https://github.com/TheMalwareGuardian/Benthic) -> Benthic is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits.
+* [Github: Abyss Windows UEFI Bootkit](https://github.com/TheMalwareGuardian/Abyss) -> Abyss is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits. By offering a centralized repository of knowledge, Abyss stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
+* [Github: Bootkits Development Starter Pack](https://github.com/TheMalwareGuardian/Bootkits-Development-Starter-Pack) -> Starter pack for learning how to develop UEFI bootkits: basic proof-of-concepts, development environment configuration, and step-by-step resources to begin coding low-level bootkit components from scratch.
+* [Github: Benthic Windows Kernel Rootkit](https://github.com/TheMalwareGuardian/Benthic) -> Benthic is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits. By offering a centralized repository of knowledge, Benthic stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
+* [Github: Rootkits Development Starter Pack](https://github.com/TheMalwareGuardian/Rootkits-Development-Starter-Pack) -> Starter pack for learning how to develop Kernel-Mode rootkits: basic proof-of-concepts, development environment configuration, and step-by-step resources to begin coding low-level rootkit components from scratch.
+* [Github: VMware Workstation Secure Boot Custom Keys](https://github.com/TheMalwareGuardian/VMware-Secure-Boot-Custom-Keys) -> How to modify Secure Boot keys (PK, KEK, DB, DBX) in a virtual machine created with VMware Workstation (finally explained properly).
 * [Github: PKfail](https://github.com/TheMalwareGuardian/PKfail) -> PKfail is a summary and proof-of-concept project demonstrating how UEFI Secure Boot can be bypassed on platforms configured with test-signing keys as the Platform Key (PK), exposing a common misconfiguration that undermines platform integrity.
 * [Github: UEFI Firmware Analysis](https://github.com/TheMalwareGuardian/UEFI-Firmware-Analysis) -> A set of personal notes and practical steps to guide you through analyzing the UEFI firmware of your own hardware, including techniques to inspect, dump, and review firmware images for misconfigurations or potential weaknesses.
 * [Github: Hello WinDbg Scripting](https://github.com/TheMalwareGuardian/WinDbg_Scripting) -> This repository serves as a starting point for scripting in WinDbg, covering WinDbg native scripting, JavaScript, and PyKD (Python).
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='bios-uefi'/>
@@ -301,7 +332,7 @@ Return here once you have developed a better grasp of the subject.
 
 This should be your starting point.
 
-* [Web Wikipedia: Booting](https://en.wikipedia.org/wiki/Booting) -> In computing, booting is the process of starting a computer as initiated via hardware such as a button on the computer or by a software command
+* [Web Wikipedia: Booting](https://en.wikipedia.org/wiki/Booting) -> In computing, booting is the process of starting a computer as initiated via hardware such as a button on the computer or by a software command.
 * [Web OsDev: UEFI](https://wiki.osdev.org/UEFI) -> UEFI is a specification for x86, x86-64, ARM, and Itanium platforms that defines a software interface between the operating system and the platform firmware/BIOS.
 * [Blog: Programming for EFI](https://www.rodsbooks.com/) -> Tech-savvy individuals know the Extensible Firmware Interface (EFI) and its newer variant, the Unified EFI (UEFI) as a replacement for the older Basic Input/Output System (BIOS) on PCs and other computers. What you may not be aware of is that EFI is a complex software environment, comparable in size and features to a simple OS such as DOS. As such, EFI can host a variety of programs—but those programs can't spring into existence fully-formed, like Athena from Zeus' head. Rather, they must be written by individuals.
 
@@ -317,6 +348,7 @@ Familiarize yourself with UEFI watching these videos.
 * [Youtube Video: PC BIOS Settings](https://www.youtube.com/watch?v=ezubjTO7rRI&t=10s) -> BIOS / UEFI settings, including boot options, secure boot, enabling XMP memory profiles, and BIOS passwords. Also information on the differences between a legacy BIOS and a UEFI BIOS, and how to enter the BIOS.
 * [Youtube Video: ThatOsDev - EFI based Bootloader](https://www.youtube.com/watch?v=_98PUTJc9Yk&list=PLwH94sFU_ljPi2ClIcWIvuc1GdLT81uuH&index=4) -> EFI Explained.
 * [Youtube Video: UEFIForum - Best Practices for UEFI Secure Boot Customization](https://www.youtube.com/watch?v=WBemkwMHLJM) -> UEFI Secure Boot helps provide an effective defense against boot malware, but following today's best practices in its implementation, deployment and configurability can help its increase its effectiveness against increasingly sophisticated exploits.
+* [Youtube Video: Techsavvy - Mastering UEFI, Your Essential Guide to Hardware-Firmware and Boot-Chain Security](https://www.youtube.com/watch?v=pazWRQt-IUE) -> This comprehensive guide breaks down the essentials of UEFI, exploring its functionality, the significance of SPI flash, and the various boot phases. We'll compare open-source and proprietary firmware solutions like Phoenix and AMI, and address the ongoing challenges vendors face against malicious software.
 
 
 <div id='bios-uefi-windows-boot'/>
@@ -338,6 +370,7 @@ Gain an understanding of the Windows boot process and the existing protection me
 
 Explore BIOS vulnerabilities, it's fine if it appears challenging at this moment.
 
+* [Github: Awesome UEFI Vulnerabilities](https://github.com/TheMalwareGuardian/Awesome-UEFI-Vulnerabilities)
 * [Presentation: BlackHat USA 2009 - Attacking Intel Bios](https://www.blackhat.com/presentations/bh-usa-09/WOJTCZUK/BHUSA09-Wojtczuk-AtkIntelBios-SLIDES.pdf)
 * [Youtube Video: BlackHat USA 2009 - Attacking Intel Bios](https://www.youtube.com/watch?v=CRjcKv-xiqw) -> We demonstrate how to permanently reflash Intel BIOSes on the latest Intel Q45-based systems. In contrast to a previous work done by other researches a few months earlier, who targeted totally unprotected low-end BIOSes, we focus on how to permanently reflash one of the most secure BIOSes out there, that normally only allow a vendor's digitally signed firmware to be flashed.
 * [Presentation: REcon 2015 - Attacking and Defending BIOS](https://recon.cx/2015/slides/recon2015-09-yuriy-bulygin-oleksandr-bazhaniuk-Attacking-and-Defending-BIOS-in-2015.pdf)
@@ -349,7 +382,7 @@ Explore BIOS vulnerabilities, it's fine if it appears challenging at this moment
 * [Presentation: BlackHat USA 2017 - Betraying the BIOS, Where the Guardians of the BIOS are Failing](https://www.blackhat.com/docs/us-17/wednesday/us-17-Matrosov-Betraying-The-BIOS-Where-The-Guardians-Of-The-BIOS-Are-Failing.pdf)
 * [Youtube Video: BlackHat USA 2017 - Betraying the BIOS, Where the Guardians of the BIOS are Failing](https://www.youtube.com/watch?v=Dfl2JI2eLc8) -> For UEFI firmware, the barbarians are at the gate -- and the gate is open. On the one hand, well-intentioned researchers are increasingly active in the UEFI security space; on the other hand, so are attackers. Information about UEFI implants -- by HackingTeam and state-sponsored actors alike -- hints at the magnitude of the problem, but are these isolated incidents, or are they indicative of a more dire lapse in security?
 * [Presentation: BlackHat USA 2017 - Firmware is the New Black, Analyzing Past Three Years of BIOS/UEFI Security Vulnerabilities](https://github.com/rrbranco/BlackHat2017/blob/master/BlackHat2017-BlackBIOS-v0.13-Published.pdf)
-* [Youtube Video: BlackHat USA 2017 - Firmware is the New Black, Analyzing Past Three Years of BIOS/UEFI Security Vulnerabilities](https://www.youtube.com/watch?v=MONgHW2rpY8) -> In recent years, we witnessed the rise of firmware-related vulnerabilities, likely a direct result of increasing adoption of exploit mitigations in major/widespread operating systems - including for mobile phones. 
+* [Youtube Video: BlackHat USA 2017 - Firmware is the New Black, Analyzing Past Three Years of BIOS/UEFI Security Vulnerabilities](https://www.youtube.com/watch?v=MONgHW2rpY8) -> In recent years, we witnessed the rise of firmware-related vulnerabilities, likely a direct result of increasing adoption of exploit mitigations in major/widespread operating systems - including for mobile phones.
 * [Presentation: BlackHat Europe 2023 - LogoFAIL, Security Implications of Image Parsing During System Boot](https://i.blackhat.com/EU-23/Presentations/EU-23-Pagani-LogoFAIL-Security-Implications-of-Image_REV2.pdf)
 * [Youtube Video: BlackHat Europe 2023 - LogoFAIL, Security Implications of Image Parsing During System Boot](https://www.youtube.com/watch?v=ch0t2_yjQJQ) -> Enter LogoFAIL, our latest research revealing significant security vulnerabilities in the image parsing libraries used by nearly all BIOS vendors to display logo images during boot. Our research highlights the risks associated with parsing complex file formats at such a delicate stage of the platform startup. During this talk, we will show how some UEFI BIOSes allow attackers to store custom logo images, which are parsed during boot, on the EFI system partition (ESP) or inside unsigned sections of a firmware update. We also shed light on the implications of these vulnerabilities, which extend beyond mere graphical rendering. In fact, successful exploitation of these vulnerabilities allows attackers to hijack the execution flow and achieve arbitrary code execution. LogoFAIL vulnerabilities can compromise the security of the entire system rendering "below-the-OS" security measures completely ineffective (e.g., Secure Boot). Finally, our talk will include a detailed explanation of how we successfully escalate privileges from OS to firmware level by exploiting a real device vulnerable to LogoFAIL...
 * [Presentation: BlackHat Europe 2020 - efiXplorer, Hunting for UEFI Firmware Vulnerabilities at Scale with Automated Static Analysis](https://i.blackhat.com/eu-20/Wednesday/eu-20-Labunets-efiXplorer-Hunting-For-UEFI-Firmware-Vulnerabilities-At-Scale-With-Automated-Static-Analysis.pdf)
@@ -363,8 +396,9 @@ Explore BIOS vulnerabilities, it's fine if it appears challenging at this moment
 * [Web SentinelLabs: Moving From Common-Sense Knowledge About UEFI To Actually Dumping UEFI Firmware](https://www.sentinelone.com/labs/moving-from-common-sense-knowledge-about-uefi-to-actually-dumping-uefi-firmware/)
 * [Web SentinelLabs: Moving From Manual Reverse Engineering of UEFI Modules To Dynamic Emulation of UEFI Firmware](https://www.sentinelone.com/labs/moving-from-manual-reverse-engineering-of-uefi-modules-to-dynamic-emulation-of-uefi-firmware/)
 * [Web SentinelLabs: Moving From Dynamic Emulation of UEFI Modules To Coverage-Guided Fuzzing of UEFI Firmware](https://www.sentinelone.com/labs/moving-from-dynamic-emulation-of-uefi-modules-to-coverage-guided-fuzzing-of-uefi-firmware/)
-* [Web SentinelLabs: Adventures From UEFI Land: the Hunt For the S3 Boot Script](https://www.sentinelone.com/labs/adventures-from-uefi-land-the-hunt-for-the-s3-boot-script/)
+* [Web SentinelLabs: Adventures From UEFI Land, the Hunt For the S3 Boot Script](https://www.sentinelone.com/labs/adventures-from-uefi-land-the-hunt-for-the-s3-boot-script/)
 * [Web Margin Research: Emulating and Exploiting UEFI Firmware](https://margin.re/2023/09/emulating-and-exploiting-uefi-firmware/) -> Dynamically inspecting software becomes harder the lower the level of abstraction you go; while there are many resources for debugging userspace programs, there is less information out there for kernels, bootloaders, and system firmware.
+* [Web Basic Input/Output: Reverse Engineering UEFI with Ghidra](https://www.basicinputoutput.com/2023/10/reverse-engineering-uefi-with-ghidra.html) -> Dynamically inspecting software becomes harder the lower the level of abstraction you go; while there are many resources for debugging userspace programs, there is less information out there for kernels, bootloaders, and system firmware.
 
 
 <div id='bios-uefi-tools'/>
@@ -386,9 +420,11 @@ Analyze, test, and modify UEFI firmware.
 * [Web Ghidra SRE: Software Reverse Engineering framework](https://ghidra-sre.org/) -> A software reverse engineering (SRE) suite of tools developed by NSA's Research Directorate in support of the Cybersecurity mission
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='edk2'/>
@@ -411,6 +447,7 @@ Configure the required development environment.
 * [Github: UEFI Pratical Programming](https://github.com/luobing/uefi-practical-programming)
 * [GitHub: EDK II Driver Writer's Guide](https://github.com/tianocore-docs/edk2-UefiDriverWritersGuide/blob/master/EXAMPLES.md)
 * [Web Linkedin: Understanding and Exploiting UEFI Secure Boot with Intel's EDK2](https://www.linkedin.com/pulse/understanding-exploiting-uefi-secure-boot-intels-edk2-jose-crespo?trk=portfolio_article-card_title)
+* [Blog Medium: A hitchhiker's guide to UEFI programming in Windows](https://medium.com/d-classified/a-hitchhikers-guide-to-uefi-programming-in-windows-7449994a0486) -> Wang Mingjie unpacks the entire process of developing UEFI programs, covering everything from building to deployment on actual systems with Secure Boot enabled. While not a technical deep-dive, his guide provides engineers-at-large with a grasp of different elements of the UEFI environment, and understand its impact on the execution and deployment of UEFI programs. Mingjie also includes various practical considerations to assist readers in evaluating different deployment options.
 
 
 <div id='edk2-videos'/>
@@ -429,17 +466,25 @@ Check out these videos to learn advanced development techniques.
 
 UEFI applications and drivers.
 
+* [Github: Develop UEFI Aplications and DXE Runtime Drivers](https://github.com/TheMalwareGuardian/Abyss/tree/main/01%20Bootkits) -> This folder contains a variety of UEFI Applications and DXE Runtime Drivers. Each proof-of-concept is built to illustrate specific boot-stage behaviors (networking, payload staging, memory access, disk interaction, etc.). While all source code is included, newcomers are encouraged to first understand the build process and toolchain setup. If this is your first time working with UEFI, start by setting up your environment and then compile your first .EFI binary. You will find both manual instructions for Windows and Linux, as well as references to automation scripts.
 * [Github: EDK2 - MdeModulePkg Applications](https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Application/) -> Sample applications of     MdeModulePkg package.
+* [Github: UEFI Lessons](https://github.com/Kostr/UEFI-Lessons) -> Lessons to get to know UEFI programming in Linux with the help of EDKII.
 * [Github: Shim - A first-stage UEFI bootloader](https://github.com/rhboot/shim) -> Shim is a trivial EFI application that, when run, attempts to open and execute another application. It will initially attempt to do this via the standard EFI LoadImage() and StartImage() calls. If these fail (because Secure Boot is enabled and the binary is not signed with an appropriate key, for instance) it will then validate the binary against a built-in certificate. If this succeeds and if the binary or signing key are not forbidden then shim will relocate and execute the binary.
+* [Github: Memory Dump UEFI](https://github.com/NoInitRD/Memory-Dump-UEFI) -> A UEFI application for dumping the contents of RAM. Intended to be flashed onto a USB connected device and booted live. It comes with a UEFI shell to facilitate navigation and use.
 * [Github: Super UEFIinSecureBoot Disk](https://github.com/ValdikSS/Super-UEFIinSecureBoot-Disk) -> Super UEFIinSecureBoot Disk is a proof-of-concept (not actively maintained or enhanced) bootable image with GRUB2 bootloader designed to be used as a base for recovery USB flash drives. Key feature: disk is fully functional with UEFI Secure Boot mode activated. It can launch any operating system or .efi file, even with untrusted, invalid or missing signature.
 * [Github: TcpTransport](https://github.com/vinxue/TcpTransport) -> A UEFI application to receive TCP network packets.
-* [Github: UefiVarMonitor](https://github.com/tandasat/UefiVarMonitor) -> The runtime DXE driver monitoring access to the UEFI variables by hooking the runtime service table. 
+* [Github: UefiVarMonitor](https://github.com/tandasat/UefiVarMonitor) -> The runtime DXE driver monitoring access to the UEFI variables by hooking the runtime service table.
+* [Github: UefiVarTool](https://github.com/GeographicCone/UefiVarTool) -> Scriptable tool to read and write UEFI variables from EFI shell. View, save, edit and restore hidden UEFI (BIOS) Setup settings faster than with the OEM menu forms.
 * [Github: FakeSecureBoot](https://github.com/Shmurkio/FakeSecureBoot) -> UEFI DXE driver to fake Secure Boot. Hooks the gRT->GetVariable function to always return enabled if Secure Boot state is queried.
+* [Github: Simple UEFI Bootloader](https://github.com/KunYi/Simple-UEFI-Bootloader) -> This bootloader is like a much simpler version of GRUB/Elilo/Windows Boot Manager, but mainly meant for writing your own operating system-less 64-bit programs, kernels, or full operating systems. It supports Windows, Linux, and Mac executable binaries (PE32+, 64-bit ELF, and 64-bit Mach-O formats). It also supports... Well, I'll let you figure that one out yourself.
+* [Github: Signed UEFI Shell](https://github.com/HackingThings/SignedUEFIShell) -> Information about a signed UEFI Shell that can be used when Secure Boot is enabled.
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='bootkits'/>
@@ -466,21 +511,27 @@ What is a bootkit exactly? Are they the elements you can develop with EDK2?
 
 Watch these videos to learn what a bootkit is and the techniques used in its development.
 
-* [Presentation: BlackHat USA 2013 - Detecting OSX and Windows bootkits with RDFU](https://cdn2.hubspot.net/hubfs/3375217/Reversing_Labs_November%202018/File/Presentation-BlackHat-Vegas-2013.pdf)
-* [Youtube Video: BlackHat USA 2013 - Detecting OSX and Windows bootkits with RDFU](https://www.youtube.com/watch?v=7UsdRzsue-g) -> UEFI has recently become a very public target for rootkits and malware. To combat this new threat, we developed a Rootkit Detection Framework for UEFI ("RDFU") that incorporates a unified set of tools that address this problem across a wide spectrum of UEFI implementations.
-* [Presentation: HackInTheBox 2013 - Dreamboot](https://archive.conference.hitb.org/hitbsecconf2013ams/materials/D2T1%20-%20Sebastien%20Kaczmarek%20-%20Dreamboot%20UEFI%20Bootkit.pdf)
-* [Youtube Video: HackInTheBox 2013 - Dreamboot](https://www.youtube.com/watch?v=KvTUE5P-Yhs) -> This presentation is a study of the overall architecture of UEFI from a security point of view with a focus on a bootkit implementation for Windows 8 x64 which exploits the UEFI firmware: Dreamboot. Dreamboot has two specific payloads: Privilege escalation and Windows local authentication bypass. DreamBoot comes in the form of a bootable ISO, to use preferably as part of a physical attack (i.e. when the attacker has physical access to the machine peripherals: DVD or USB ports). It is also fully functional in virtualized environments like VMWare Workstation or ESX.
+* [Presentation: DEF CON 33 - Infecting the Boot to Own the Kernel - Alejandro Vazquez, Maria San Jose](https://media.defcon.org/DEF%20CON%2033/DEF%20CON%2033%20presentations/Alejandro%20Vazquez%20Vazquez%20Maria%20San%20Jose%20-%20Infecting%20the%20Boot%20to%20Own%20the%20Kernel%20Bootkits%20and%20Rootkits%20Development%20Presentation.pdf)
+* [Youtube Video: DEF CON 33 - Infecting the Boot to Own the Kernel - Alejandro Vazquez, Maria San Jose](https://www.youtube.com/watch?v=iS0XJVyxA3M) -> Bootkits and Rootkits represent some of the most complex and stealthy forms of malware, capable of achieving full system control before and after the OS is loaded. While often discussed in theory, their actual construction, interaction, and execution flow remain mostly hidden from public view. This talk sheds light on how these implants are built and how their components interact across boot stages and kernel space. We'll explore the internals of a fully functional UEFI Bootkit and Kernel-mode Rootkit, examining their modular design, runtime interactions, and the mechanisms used to hook critical parts of the Windows boot chain. Attendees will see how these implants operate across pre-boot and post-boot phases, including early internet connectivity from firmware, dynamic payload delivery, runtime service hooking, deep kernel control, and advanced capabilities like hiding files, processes, and network activity, blocking traffic, capturing keystrokes, and maintaining command and control directly from kernel space. Everything shown on stage will be yours to explore: a complete Bootkit and Rootkit framework, fully customizable and ready to simulate real threats, test defenses, or build something even stealthier.
+* [Youtube Video: Off By One Security - Emulating APTs, Building and Deploying Bootkits & Rootkits](https://www.youtube.com/watch?v=8Uw6Tq4rw2s) -> When we talk about truly advanced malware, the kind that only state-level or highly resourced APTs are capable of developing and deploying end-to-end, we're referring to what are known as bootkits and rootkits. In the first session we did on the Off-By-One Security YouTube channel, we introduced how to start developing these implants, mapping them to their programmable components, and we shared malware examples, proofs of concept, and various resources for you to develop your own. In this follow-up, we'll go deeper into the source code (including the kinds of changes required to adapt implants across multiple OS versions) and deployment process with live demonstrations in isolated virtual machines where Next-Generation Antivirus and EDR solutions are installed, showing live how these solutions often fail to detect this kind of activity because it originates from as deep as the boot process, where exhaustive monitoring is not possible.
+* [Youtube Video: Off By One Security - UEFI Bootkits and Kernel-Mode Rootkits Development with Alejandro Vazquez](https://www.youtube.com/watch?v=oa2i7JsGOHo) -> Bootkits and Rootkits represent some of the most complex and stealthy forms of malware, capable of achieving full system control before and after the OS is loaded. While often discussed in theory, their actual construction, interaction, and execution flow remain mostly hidden from public view. This talk sheds light on how these implants are built and how their components interact across boot stages and kernel space. We'll explore the internals of a fully functional UEFI Bootkit and Kernel-mode Rootkit, examining their modular design, runtime interactions, and the mechanisms used to hook critical parts of the Windows boot chain. Attendees will see how these implants operate across pre-boot and post-boot phases, including early internet connectivity from firmware, dynamic payload delivery, runtime service hooking, deep kernel control, and advanced capabilities like hiding files, processes, and network activity, blocking traffic, capturing keystrokes, and maintaining command and control directly from kernel space. Everything shown on stage will be yours to explore: a complete Bootkit and Rootkit framework, fully customizable and ready to simulate real threats, test defenses, or build something even stealthier.
+* [Presentation: OffensiveCon18 - Alex Ionescu Advancing the State of UEFI Bootkits](http://publications.alex-ionescu.com/OffensiveCon/OffensiveCon%202018%20-%20Advancing%20the%20state%20of%20UEFI%20Boot%20Kits.pdf)
+* [Youtube Video: OffensiveCon18 - Alex Ionescu Advancing the State of UEFI Bootkits](https://www.youtube.com/watch?v=dpG97TBR3Ys) -> Persistence in the Age of PatchGuard and Windows 10.
+* [Presentation: RSA Conference - ESPecter, Showing the Future of UEFI Threats](https://static.rainfocus.com/rsac/us22/sess/1628600566532001BQMV/finalwebsite/2022_USA22_HT-M01_01_ESPecter-Showing-the-Future-of-UEFI-Threats_1654098813782001estI.pdf)
+* [Youtube Video: RSA Conference - ESPecter, Showing the Future of UEFI Threats](https://www.youtube.com/watch?v=rpfE78x7dD4) -> In recent years, it's become clear that UEFI threats are real and have been deployed in the wild. UEFI implants such as LoJax and MosaicRegressor have used the lowest level of persistence, SPI flash, but is it worth it? Actors behind ESPecter bootkit think that compromising the bootloader is the way. This session will explain why and how to protect against this and similar threats.
+* [Presentation: RSA Conference - UEFI Bootkits and Where UEFI Security Fails](https://static.rainfocus.com/rsac/us24/sess/1697270793852001dpne/finalwebsite/2024_USA24_HTA-T09_01_UEFI-Bootkits-and-Where-UEFI-Security-Fails_1713983196427001MzOd.pdf)
+* [Youtube Video: RSA Conference - UEFI Bootkits and Where UEFI Security Fails](https://www.youtube.com/watch?v=X3YOKkTdj_k) -> The BlackLotus UEFI bootkit bypassed UEFI Secure Boot on Windows systems that were fully updated, by exploiting an old vulnerability that has been known and patched for over a year. How is that possible? Are there other such vulnerabilities? Join this session for a tour of UEFI threats, vulnerabilities, and issues with UEFI security, and learn what you can do to protect your systems.
+* [Youtube Video: Nullcon 2022 - A UEFI firmware bootkit in the wild](https://www.youtube.com/watch?v=lSpOFUCzFdk) -> Despite the advanced capabilities they provide, low-level implants such as bootkits and rootkits are only deployed by the most sophisticated attackers due to the risk they pose to the victim system's stability. In recent years, Kaspersky has however observed a number of new low-level malware, such as MosaicRegressor, MoonBounce, and the object of this talk, CosmicStrand.
 * [Paper: Virus Bulletin 2014 - Bootkits past, present & future](https://www.virusbulletin.com/virusbulletin/2014/11/paper-bootkits-past-present-amp-future)
 * [Youtube Video: Virus Bulletin 2014 - Bootkits past, present & future](https://www.youtube.com/watch?v=jN34P4EdIUw) -> Bootkit threats have always been a powerful weapon in the hands of cybercriminals, allowing them to establish persistent and stealthy presence in their victims' systems. The most recent notable spike in bootkit infections was associated with attacks on 64-bit versions of the Microsoft Windows platform, which restrict the loading of unsigned kernel-mode drivers. However, these bootkits aren't effective against UEFI-based platforms. So, are UEFI-based machines immune against bootkit threats (or would they be)?
 * [Paper: BlackHat USA 2014 - Exposing Bootkits with BIOS Emulation](https://www.blackhat.com/docs/us-14/materials/us-14-Haukli-Exposing-Bootkits-With-BIOS-Emulation-WP.pdf)
 * [Youtube Video: BlackHat USA 2014 - Exposing Bootkits with BIOS Emulation](https://www.youtube.com/watch?v=siMj4bFx5nI) -> Stealth and persistency are invaluable assets to an intruder. You cannot defend against what you cannot see. This talk discusses techniques to counter attempts at subverting modern security features, and regain control of compromised machines, by drilling down deep into internal structures of the operating system to battle the threat of bootkits.
-* [Youtube Video: Nullcon 2022 - A UEFI firmware bootkit in the wild](https://www.youtube.com/watch?v=lSpOFUCzFdk) -> Despite the advanced capabilities they provide, low-level implants such as bootkits and rootkits are only deployed by the most sophisticated attackers due to the risk they pose to the victim system's stability. In recent years, Kaspersky has however observed a number of new low-level malware, such as MosaicRegressor, MoonBounce, and the object of this talk, CosmicStrand.
-* [Presentation: RSA Conference - ESPecter, Showing the Future of UEFI Threats](https://static.rainfocus.com/rsac/us22/sess/1628600566532001BQMV/finalwebsite/2022_USA22_HT-M01_01_ESPecter-Showing-the-Future-of-UEFI-Threats_1654098813782001estI.pdf)
-* [Youtube Video: RSA Conference - ESPecter, Showing the Future of UEFI Threats](https://www.youtube.com/watch?v=rpfE78x7dD4) -> In recent years, it's become clear that UEFI threats are real and have been deployed in the wild. UEFI implants such as LoJax and MosaicRegressor have used the lowest level of persistence, SPI flash, but is it worth it? Actors behind ESPecter bootkit think that compromising the bootloader is the way. This session will explain why and how to protect against this and similar threats.
-* [Presentation: OffensiveCon18 - Alex Ionescu Advancing the State of UEFI Bootkits](http://publications.alex-ionescu.com/OffensiveCon/OffensiveCon%202018%20-%20Advancing%20the%20state%20of%20UEFI%20Boot%20Kits.pdf)
-* [Youtube Video: OffensiveCon18 - Alex Ionescu Advancing the State of UEFI Bootkits](https://www.youtube.com/watch?v=dpG97TBR3Ys) -> Persistence in the Age of PatchGuard and Windows 10.
-* [Presentation: RSA Conference - UEFI Bootkits and Where UEFI Security Fails](https://static.rainfocus.com/rsac/us24/sess/1697270793852001dpne/finalwebsite/2024_USA24_HTA-T09_01_UEFI-Bootkits-and-Where-UEFI-Security-Fails_1713983196427001MzOd.pdf)
-* [Youtube Video: RSA Conference - UEFI Bootkits and Where UEFI Security Fails](https://www.youtube.com/watch?v=X3YOKkTdj_k) -> The BlackLotus UEFI bootkit bypassed UEFI Secure Boot on Windows systems that were fully updated, by exploiting an old vulnerability that has been known and patched for over a year. How is that possible? Are there other such vulnerabilities? Join this session for a tour of UEFI threats, vulnerabilities, and issues with UEFI security, and learn what you can do to protect your systems.
+* [Presentation: BlackHat USA 2013 - Detecting OSX and Windows bootkits with RDFU](https://cdn2.hubspot.net/hubfs/3375217/Reversing_Labs_November%202018/File/Presentation-BlackHat-Vegas-2013.pdf)
+* [Youtube Video: BlackHat USA 2013 - Detecting OSX and Windows bootkits with RDFU](https://www.youtube.com/watch?v=7UsdRzsue-g) -> UEFI has recently become a very public target for rootkits and malware. To combat this new threat, we developed a Rootkit Detection Framework for UEFI ("RDFU") that incorporates a unified set of tools that address this problem across a wide spectrum of UEFI implementations.
+* [Presentation: HackInTheBox 2013 - Dreamboot](https://archive.conference.hitb.org/hitbsecconf2013ams/materials/D2T1%20-%20Sebastien%20Kaczmarek%20-%20Dreamboot%20UEFI%20Bootkit.pdf)
+* [Youtube Video: HackInTheBox 2013 - Dreamboot](https://www.youtube.com/watch?v=KvTUE5P-Yhs) -> This presentation is a study of the overall architecture of UEFI from a security point of view with a focus on a bootkit implementation for Windows 8 x64 which exploits the UEFI firmware: Dreamboot. Dreamboot has two specific payloads: Privilege escalation and Windows local authentication bypass. DreamBoot comes in the form of a bootable ISO, to use preferably as part of a physical attack (i.e. when the attacker has physical access to the machine peripherals: DVD or USB ports). It is also fully functional in virtualized environments like VMWare Workstation or ESX.
+* [Youtube Video: (Spanish) RootedCON 2024 - In the Roots of Evil, A Deep Dive into UEFI Bootkit Development (ES)](https://www.youtube.com/watch?v=NfhVqgiJSs4)
+* [Youtube Video: (Spanish) ViconGal 2024 - The New Age of Bootkits, Persistence and Evasion from the Kernel (ES)](https://www.youtube.com/watch?v=cDqh6LMlja4)
 
 
 <div id='bootkits-analysis'/>
@@ -492,14 +543,15 @@ Gain a true understanding of this malware by reading its analyses.
 * [Web WeLiveSecurity: BlackLotus UEFI bootkit - Myth confirmed](https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/) -> The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated UEFI systems is now a reality.
 * [Web Binarly: The Untold Story of the BlackLotus UEFI Bootkit](https://www.binarly.io/blog/the-untold-story-of-the-blacklotus-uefi-bootkit) -> My experience with the analysis and detection of rootkits and bootkits goes back more than 20 years. In the early 2000s, the main challenge was dealing with infected machines when rootkits and bootkits modified the operating system kernel to conceal malicious components. It was such a fun time reverse engineering advanced threats in the good old days that I co-wrote "Rootkits and Bootkits: Reversing Modern Malware and Next Generation Threats", a book full of the most interesting stories of our time going down the rabbit hole of advanced malware.
 * [Web WeLiveSecurity: UEFI threats moving to the ESP - Introducing ESPecter bootkit](https://www.welivesecurity.com/2021/10/05/uefi-threats-moving-esp-introducing-especter-bootkit/) -> ESET research discovers a previously undocumented UEFI bootkit with roots going back all the way to at least 2012.
+* [Web WeLiveSecurity: Introducing HybridPetya: Petya/NotPetya copycat with UEFI Secure Boot bypass](https://www.welivesecurity.com/en/eset-research/introducing-hybridpetya-petya-notpetya-copycat-uefi-secure-boot-bypass/) -> UEFI copycat of Petya/NotPetya exploiting CVE-2024-7344 discovered on VirusTotal.
 * [Web Palo Alto: Diving Into Glupteba's UEFI Bootkit](https://unit42.paloaltonetworks.com/glupteba-malware-uefi-bootkit/) -> Glupteba is advanced, modular and multipurpose malware that, for over a decade, has mostly been seen in financially driven cybercrime operations. This article describes the infection chain of a new campaign that took place around November 2023. We will focus on one intriguing and previously undocumented feature: a Unified Extensible Firmware Interface (UEFI) bootkit.
+* [Web Binarly: UEFI Bootkit Hunting: In-Depth Search for Unique Code Behavior](https://www.binarly.io/blog/uefi-bootkit-hunting-in-depth-search-for-unique-code-behavior) -> Firmware threats such as bootkits and implants have become increasingly prevalent due to their persistence and ability to evade detection compared to traditional OS-level malware. Attackers favor these threats because they can remain undetected even when conventional security measures are in place, especially if UEFI Secure Boot is disabled. Detecting unknown bootkits under these circumstances is a critical challenge in cybersecurity. Mostly, the publicly known UEFI implants and bootkits have been detected after successful deployment, which points to the limitations of the existing security solutions.
+* [Web VMWare: Detecting UEFI Bootkits in the Wild](https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html) -> Threat actors are continually looking for ways to improve the persistence of their malware and implants. Bootkits, meaning rootkits running at the firmware level, have been utilized for this purpose. Once bootkits are installed, it can be extremely difficult to detect or remove versus OS-level rootkits as they are executed prior to the actual OS boot process.
 * [Web SecureList: FinSpy - Unseen findings](https://securelist.com/finspy-unseen-findings/104322/) -> FinSpy, also known as FinFisher or Wingbird, is an infamous surveillance toolset. Kaspersky has been tracking deployments of this spyware since 2011.
 * [Web SecureList: CosmicStrand - The discovery of a sophisticated UEFI firmware rootkit](https://securelist.com/cosmicstrand-uefi-firmware-rootkit/106973/) -> FinSpy, also known as FinFisher or Wingbird, is an infamous surveillance toolset. Kaspersky has been tracking deployments of this spyware since 2011.
 * [Web SecureList: MosaicRegressor - Lurking in the Shadows of UEFI](https://securelist.com/mosaicregressor/98849/) -> UEFI has become a prominent technology that is embedded within designated chips on modern day computer systems. Replacing the legacy BIOS, it is typically used to facilitate the machine's boot sequence and load the operating system, while using a feature-rich environment to do so. At the same time, it has become the target of threat actors to carry out exceptionally persistent attacks.
 * [Web WeLiveSecurity: LoJax - First UEFI rootkit found in the wild, courtesy of the Sednit group](https://www.welivesecurity.com/2018/09/27/lojax-first-uefi-rootkit-found-wild-courtesy-sednit-group/) -> ESET researchers have shown that the Sednit operators used different components of the LoJax malware to target a few government organizations in the Balkans as well as in Central and Eastern Europe.
 * [Web Twitter X: ESETresearch - Malicious EFI samples](https://x.com/ESETresearch/status/1275770256389222400) -> ESETresearch identified multiple malicious EFI bootloader samples. The malware displays a ransom message and prevents the computer from booting. It can compromise computers with disabled UEFI Secure Boot feature.
-* [Web VMWare: Detecting UEFI Bootkits in the Wild](https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html) -> Threat actors are continually looking for ways to improve the persistence of their malware and implants. Bootkits, meaning rootkits running at the firmware level, have been utilized for this purpose. Once bootkits are installed, it can be extremely difficult to detect or remove versus OS-level rootkits as they are executed prior to the actual OS boot process.
-* [Web Binarly: UEFI Bootkit Hunting: In-Depth Search for Unique Code Behavior](https://www.binarly.io/blog/uefi-bootkit-hunting-in-depth-search-for-unique-code-behavior) -> Firmware threats such as bootkits and implants have become increasingly prevalent due to their persistence and ability to evade detection compared to traditional OS-level malware. Attackers favor these threats because they can remain undetected even when conventional security measures are in place, especially if UEFI Secure Boot is disabled. Detecting unknown bootkits under these circumstances is a critical challenge in cybersecurity. Mostly, the publicly known UEFI implants and bootkits have been detected after successful deployment, which points to the limitations of the existing security solutions.
 
 
 <div id='bootkits-source-code'/>
@@ -508,16 +560,20 @@ Gain a true understanding of this malware by reading its analyses.
 
 Observe that the components shown in the source code are the applications and drivers you can develop with EDK2.
 
-* [Github: Abyss](https://github.com/TheMalwareGuardian/Abyss) -> Abyss is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits. By offering a centralized repository of knowledge, Abyss stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
+
+<div id='bootkits-source-code-windows'/>
+
+#### ***Windows***
+
+* [Github: Abyss Windows UEFI Bootkit](https://github.com/TheMalwareGuardian/Abyss) -> Abyss is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of bootkits. By offering a centralized repository of knowledge, Abyss stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
 * [Github: RedLotus](https://github.com/memN0ps/bootkit-rs) -> Windows UEFI Bootkit in Rust designed to facilitate the manual mapping of a driver manual mapper before the kernel (ntoskrnl.exe) is loaded, effectively bypassing Driver Signature Enforcement (DSE).
 * [Github: EfiGuard](https://github.com/Mattiwatti/EfiGuard) -> Portable x64 UEFI bootkit that patches the Windows boot manager, boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
-* [Github: BlackLotus](https://github.com/ldpreload/BlackLotus) -> An innovative UEFI Bootkit designed specifically for Windows. It incorporates a built-in Secure Boot bypass and Ring0/Kernel protection to safeguard against any attempts at removal. This software serves the purpose of functioning as an HTTP Loader.
-* [Github: DmaBackdoorBoot](https://github.com/Cr4sh/s6_pcie_microblaze/tree/master/python/payloads/DmaBackdoorBoot) -> UEFI DXE driver intended for executing of kernel mode and user mode payloads under the Windows operating system by having an arbitrary code execution at early boot stage during DXE phase of the platform initialization.
 * [Github: Bootlicker](https://github.com/realoriginal/bootlicker) -> A generic UEFI bootkit used to achieve initial usermode execution.
 * [Github: Bootkit Showcase](https://github.com/hardenedvault/bootkit-samples) -> Real-World Examples of Infrastructure Security Threats.
 * [Github: SandboxBootkit](https://github.com/thesecretclub/SandboxBootkit) -> Bootkit tested on Windows Sandbox to patch ntoskrnl.exe and disable DSE/PatchGuard.
 * [Github: Umap](https://github.com/btbd/umap/) -> Windows UEFI bootkit that loads a generic driver manual mapper without using a UEFI runtime driver.
 * [Github: UEFI-Bootkit](https://github.com/ajkhoury/UEFI-Bootkit) -> A small bootkit designed to use zero assembly.
+* [Github: BlackLotus](https://github.com/ldpreload/BlackLotus) -> An innovative UEFI Bootkit designed specifically for Windows. It incorporates a built-in Secure Boot bypass and Ring0/Kernel protection to safeguard against any attempts at removal. This software serves the purpose of functioning as an HTTP Loader.
 * [Github: PeiBackdoor](https://github.com/Cr4sh/PeiBackdoor) -> This project implements early stage firmware backdoor for UEFI based firmware. It allows to execute arbitrary code written in C during Pre EFI Init (PEI) phase of Platform Initialization (PI).
 * [Github: Rovnix](https://github.com/m0n0ph1/Win64-Rovnix-VBR-Bootkit) -> Volume Boot Record Bootkit.
 * [Github: Vector EDK](https://github.com/hackedteam/vector-edk) -> EFI Development Kit.
@@ -526,11 +582,27 @@ Observe that the components shown in the source code are the applications and dr
 * [Web Back Engineering: Voyager - A Hyper-V Hacking Framework For Windows 10 x64 (AMD & Intel)](https://git.back.engineering/_xeroxz/voyager) -> Voyager is a project designed to offer module injection and vmexit hooking for both AMD & Intel versions of Hyper-V. This project works on all versions of Windows 10-x64 (2004-1507).
 * [Github: Efi-Memory - PoC EFI runtime driver for memory r/w & kdmapper fork](https://github.com/SamuelTulach/efi-memory) -> Efi-memory is a proof-of-concept EFI runtime driver for reading and writing to virtual memory. It uses EfiGuards method of hooking SetVariable to communicate with the user-mode process.
 * [Github: EFI Driver Access](https://github.com/TheCruZ/EFI_Driver_Access) -> Efi Driver Access is a simply project to load a driver during system boot with the idea to give the user kernel access for read/write memory without restrictions.
+* [Github: BlackIris](https://github.com/aitorfirm/BlackIris) -> BlackIris is a full-scale, modular UEFI rootkit with physical memory mapping, runtime persistence, remote command control, file encryption, and a keyserver backend. It executes below the OS using real UEFI Runtime Services and survives Secure Boot bypass.
+* [Github: Calypso](https://github.com/3a1/Calypso) -> A lightweight UEFI Bootkit with user-mode communication.
+* [Github: Resilience](https://github.com/xsh3llsh0ck/ResilienceKit) -> Another UEFI bootkit that drops payload in RT phase of OS.
+* [Github: Insomnia](https://github.com/3a1/Insomnia/) -> UEFI Bootkit that infects kernel with backdoor using SSDT hook.
+* [Github: UEFI Rootkit](https://github.com/killvxk/uefi-rootkit) -> Bachelor thesis about a UEFI Rookit communicating witht the TPM module in an effort to gain trusted information from the windows boot process.
+* [Github: DmaBackdoorBoot](https://github.com/Cr4sh/s6_pcie_microblaze/tree/master/python/payloads/DmaBackdoorBoot) -> UEFI DXE driver intended for executing of kernel mode and user mode payloads under the Windows operating system by having an arbitrary code execution at early boot stage during DXE phase of the platform initialization.
+* [Github: SmmBackdoorNg](https://github.com/Cr4sh/SmmBackdoorNg) -> Updated version of System Management Mode backdoor for UEFI based platforms.
 
 
+<div id='bootkits-source-code-linux'/>
+
+#### ***linux***
+
+* [Github: Antarctic, First Open-Source UEFI Bootkit for Linux](https://github.com/TheMalwareGuardian/Antarctic)
+
+
+
 ---
 ---
 ---
+
 
 
 <div id='windows-kernel'/>
@@ -579,7 +651,7 @@ Learn about the opaque structures of Windows, the core code of the kernel.
 * [Web CodeMachine: Windows kernel data structures](https://codemachine.com/articles/kernel_structures.html) -> Catalog of key Windows kernel data structures.
 * [Web Vergilius Project: Windows kernel](https://www.vergiliusproject.com/) -> Take a look into the depths of Windows kernels and reveal more than 60000 undocumented structures.
 * [Web Geoff Chappell: Windows kernel](https://www.geoffchappell.com/) -> Because kernel-mode programming, e.g., of device drivers and file system filter drivers, is the commercial specialty that funded this website's early development as a free public resource, it could not easily itself be a subject for the free public resource. Not until 2016 did it start getting serious attention at this website, not even to publish old notes whose commercial value had long passed. Now, however, the Kernel study is well on its way to becoming a resource to reckon with for the functions and structures exposed by the kernel and the HAL.
-* [Web ReactOS](https://www.geoffchappell.com/) -> Imagine running your favorite Windows applications and drivers in an open-source environment you can trust. That's the mission of ReactOS! 
+* [Web ReactOS](https://www.geoffchappell.com/) -> Imagine running your favorite Windows applications and drivers in an open-source environment you can trust. That's the mission of ReactOS!
 
 
 <div id='windows-kernel-debugging'/>
@@ -603,7 +675,7 @@ Debug the Windows OS.
 * [Github: Modern Debugging with WinDbg Preview DEFCON 27 workshop](https://github.com/hugsy/defcon_27_windbg_workshop) -> It's 2019 and yet too many Windows developers and hackers alike rely on (useful but rather) old school tools for debugging Windows binaries (OllyDbg, Immunity Debugger). What they don't realize is that they are missing out on invaluable tools and functionalities that come with Microsoft newest WinDbg Preview edition. This hands-on workshop will attempt to level the field, by practically showing how WinDbg has changed to a point where it should be the first tool to be installed on any Windows (10) for binary analysis machine: after a brief intro to the most basic (legacy) commands, this workshop will focus around debugging modern software (vulnerability exploitation, malware reversing, DKOM-based rootkit, JS engine) using modern techniques provided by WinDbg Preview (spoiler alert to name a few, JavaScript, LINQ, TTD).
 * [Web Microsoft: Reading and Filtering Debugging Messages](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/reading-and-filtering-debugging-messages) -> The DbgPrintEx, vDbgPrintEx, vDbgPrintExWithPrefix, and KdPrintEx routines send a message to the kernel debugger under conditions that you specify. This procedure enables you to filter out low-priority messages.
 * [Web CodeMachine: WinDBG quick start tutorial](https://codemachine.com/articles/windbg_quickstart.html) -> This post goes over the important commands in WinDBG through a step-by-step follow-along style walkthrough to help you get a jump start into using WinDBG and getting familiar with the commonly used commands.
-* [Web WinDbg Info: Common WinDbg Commands](http://windbg.info/doc/1-common-cmds.html) -> Common WinDbg Commands thematically grouped by Robert Kuster 
+* [Web WinDbg Info: Common WinDbg Commands](http://windbg.info/doc/1-common-cmds.html) -> Common WinDbg Commands thematically grouped by Robert Kuster.
 
 
 <div id='windows-kernel-debugging-basics'/>
@@ -704,9 +776,9 @@ Prevent the use of unsigned drivers.
 
 * [Web Microsoft: Signing a Driver](https://learn.microsoft.com/en-us/windows-hardware/drivers/develop/signing-a-driver) -> All drivers running on 64-bit versions of Windows must be signed before Windows will load them. However, driver signing is not required on 32-bit versions of Windows. In order to sign a driver, a certificate is required. You can create your own certificate to sign your driver with during development and testing. However, for a public release you must sign your driver with a certificate issued by a trusted root authority.
 * [Web Microsoft: Introduction to Test-Signing](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/introduction-to-test-signing) -> Drivers should be test-signed with a digital signature during development and test for the following reasons: To facilitate and automate installation, To be able to load kernel-mode drivers on 64-bit versions of Windows Vista and later versions of Windows, To play back certain types of next-generation premium content, all kernel-mode components in Windows Vista and later versions of Windows must be signed.
-* [Web Driver Easy: Disable Driver Signature Enforcement on Windows 10 Easily!](https://www.drivereasy.com/knowledge/disable-driver-signature-enforcement-windows-10-easily/) -> On Windows 8 and Windows 10 (64-bit), Microsoft has included a feature, driver signature enforcement. It is a feature that is designed to ensure that users of Microsoft can only load drivers that have been signed by Microsoft. 
+* [Web Driver Easy: Disable Driver Signature Enforcement on Windows 10 Easily!](https://www.drivereasy.com/knowledge/disable-driver-signature-enforcement-windows-10-easily/) -> On Windows 8 and Windows 10 (64-bit), Microsoft has included a feature, driver signature enforcement. It is a feature that is designed to ensure that users of Microsoft can only load drivers that have been signed by Microsoft.
 * [Web Make Use Of: How to Disable Driver Signature Enforcement and Install Unsigned Drivers on Windows](https://www.makeuseof.com/disable-driver-signature-enforcement-windows/) -> Sometimes, Windows will block you from installing an unsigned driver, which is a driver you've downloaded elsewhere other than through a Windows Update or the device manufacturer's website. But if you need the driver, and you know it is perfectly safe, you can turn off driver signature enforcement and let it through.
-* [Web How To Geek: How to Disable Driver Signature Verification on 64-Bit Windows 8 or 10](https://www.howtogeek.com/167723/how-to-disable-driver-signature-verification-on-64-bit-windows-8.1-so-that-you-can-install-unsigned-drivers/) -> 64-bit versions of Windows 10 and 8 include a "driver signature enforcement" feature. They'll only load drivers that have been signed by Microsoft. To install less-than-official drivers, old unsigned drivers, or drivers you're developing yourself, you'll need to disable driver signature enforcement. 
+* [Web How To Geek: How to Disable Driver Signature Verification on 64-Bit Windows 8 or 10](https://www.howtogeek.com/167723/how-to-disable-driver-signature-verification-on-64-bit-windows-8.1-so-that-you-can-install-unsigned-drivers/) -> 64-bit versions of Windows 10 and 8 include a "driver signature enforcement" feature. They'll only load drivers that have been signed by Microsoft. To install less-than-official drivers, old unsigned drivers, or drivers you're developing yourself, you'll need to disable driver signature enforcement.
 
 
 <div id='windows-kernel-security-dse-bypasses'/>
@@ -836,6 +908,7 @@ Learn with visual examples how to develop those drivers.
 
 Samples of kernel mode drivers.
 
+* [Github: Develop Kernel Mode Drivers and User Mode Applications](https://github.com/TheMalwareGuardian/Benthic/tree/main/01%20Rootkits) -> This folder contains a variety of Kernel Mode Drivers and User Mode Applications. Each proof-of-concept is built to illustrate specific kernel behaviors (communication, filtering, networking, etc.). While all source code is included, newcomers are encouraged to first understand the build process and toolchain setup. If this is your first time working with the Windows Kernel, start by setting up your environment and then compile your first .SYS binary. You will find manual instructions for Windows, as well as references to automation scripts.
 * [Github: Windows driver samples](https://github.com/Microsoft/Windows-driver-samples) -> This repo contains driver samples prepared for use with Microsoft Visual Studio and the Windows Driver Kit (WDK). It contains both Universal Windows Driver and desktop-only driver samples.
 * [Github: Windows Kernel Programming second edition book samples](https://github.com/zodiacon/windowskernelprogrammingbook2e)
 * [Github: VectorKernel](https://github.com/daem0nc0re/VectorKernel) -> PoCs for Kernelmode rootkit techniques research or education. Currently focusing on Windows OS. All modules support 64bit OS only.
@@ -917,6 +990,7 @@ Take advantage of the vulnerabilities.
 
 ##### ***Basics***
 
+* [Github: Awesome Bring Your Own Vulnerable Driver](https://github.com/TheMalwareGuardian/Awesome-Bring-Your-Own-Vulnerable-Driver)
 * [Web Living Off The Land Drivers](https://www.loldrivers.io/) -> Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 * [Web CrowdStrike: The Current State of Exploit Development, Part 1](https://www.crowdstrike.com/blog/state-of-exploit-development-part-1/) -> In Part 1, we addressed binary exploitation on Windows systems, including some legacy and contemporary mitigations that exploit writers and adversaries must deal with in today's cyber landscape.
 * [Web CrowdStrike: The Current State of Exploit Development, Part 2](https://www.crowdstrike.com/blog/state-of-exploit-development-part-2/) -> In Part 2, we will walk through more of the many mitigations Microsoft has put in place.
@@ -924,7 +998,6 @@ Take advantage of the vulnerabilities.
 * [Web Connor McGarr: Exploit Development CVE-2021-21551 - Dell 'dbutil_2_3.sys' Kernel Exploit Writeup](https://connormcgarr.github.io/cve-2020-21551-sploit/) -> I stumbled across this SentinelOne blog post the other day, which outlined a few vulnerabilities in Dell's dbutil_2_3.sys driver, including a memory corruption vulnerability. Although this vulnerability was attributed to Kasif Dekel, it apparently was discovered earlier by Yarden Shafir and Staoshi Tanda, coworkers of mine at CrowdStrike.
 * [Blog: Windows Kernel Exploitation HEVD on Windows 10 22H2](https://medium.com/@ommadawn46/windows-kernel-exploitation-hevd-on-windows-10-22h2-b407c6f5b8f7) -> In this article, I'll share the insights I've gained from self-studying Windows kernel exploitation.
 * [Web Fluid Attacks: HEVD - kASLR + SMEP Bypass](https://fluidattacks.com/blog/hevd-smep-bypass/) -> During the last posts, we've been dealing with exploitation in Windows Kernel space. We are using HackSys Extremely Vulnerable Driver or HEVD as the target which is composed of several vulnerabilities to let practitioners sharpen the Windows Kernel exploitation skills.
-* [Web Avast: Lazarus and the FudModule Rootkit: Beyond BYOVD with an Admin-to-Kernel Zero-Day](https://decoded.avast.io/janvojtesek/lazarus-and-the-fudmodule-rootkit-beyond-byovd-with-an-admin-to-kernel-zero-day/) -> When it comes to Windows security, there is a thin line between admin and kernel. Microsoft's security servicing criteria have long asserted that "[a]dministrator-to-kernel is not a security boundary", meaning that Microsoft reserves the right to patch admin-to-kernel vulnerabilities at its own discretion. As a result, the Windows security model does not guarantee that it will prevent an admin-level attacker from directly accessing the kernel. This isn't just a theoretical concern. In practice, attackers with admin privileges frequently achieve kernel-level access by exploiting known vulnerable drivers, in a technique called BYOVD (Bring Your Own Vulnerable Driver).
 * [Web Microsoft Community: Strategies to monitor and prevent vulnerable driver attacks](https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/strategies-to-monitor-and-prevent-vulnerable-driver-attacks/ba-p/4103985) -> In the ever-evolving landscape of technology, the history of vulnerable drivers in Windows operating systems stands as a testament to the constant battle between innovation and security. From its inception, Windows has been a prime target for malicious actors seeking to exploit vulnerabilities in its drivers. These vulnerabilities, often overlooked, have played a significant role in the history of Windows, shaping its security policies and prompting a continuous cycle of patches and updates. The technique known as Bring Your Own Vulnerable Driver (BYOVD) has become a favoured strategy among threat actors. This involves introducing a digitally signed and trusted vulnerable driver into the kernel and exploiting it to gain kernel-level access. With this access a threat actor can undermine security measures, extract sensitive credentials, or alter system behaviour to remain undetected.
 * [Web Microsoft: Microsoft recommended driver block rules](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/microsoft-recommended-driver-block-rules) -> Microsoft has strict requirements for code running in kernel. So, malicious actors are turning to exploit vulnerabilities in legitimate and signed kernel drivers to run malware in kernel. One of the many strengths of the Windows platform is our strong collaboration with independent hardware vendors (IHVs) and OEMs. Microsoft works closely with our IHVs and security community to ensure the highest level of driver security for our customers. When vulnerabilities in drivers are found, we work with our partners to ensure they're quickly patched and rolled out to the ecosystem.
 * [Web Check Point: Breaking Boundaries: Investigating Vulnerable Drivers and Mitigating Risks](https://research.checkpoint.com/2024/breaking-boundaries-investigating-vulnerable-drivers-and-mitigating-risks/) -> Have you ever wondered why there are so many vulnerable drivers and what might be causing them to be vulnerable? Do you want to understand why some drivers are prone to crossing security boundaries and how we can stop that?
@@ -974,9 +1047,11 @@ Study and examine kernel components.
 * [Github: Capa - The FLARE team's open-source tool to identify capabilities in executable files](https://github.com/mandiant/capa) -> Capa detects capabilities in executable files. You run it against a PE, ELF, .NET module, shellcode file, or a sandbox report and it tells you what it thinks the program can do. For example, it might suggest that the file is a backdoor, is capable of installing services, or relies on HTTP to communicate.
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='rootkits'/>
@@ -998,11 +1073,12 @@ What is a rootkit exactly? Are they Kernel Mode Drivers?
 * [Web CyberArk: Fantastic Rootkits - And where to find them part 3](https://www.cyberark.com/resources/threat-research-blog/fantastic-rootkits-and-where-to-find-them-part-3-arm-edition) -> In this blog, we will discuss innovative rootkit techniques on a non-traditional architecture, Windows 11 on ARM64.
 * [Web JumpSec Labs: A Defender's Guide For Rootkit Detection](https://labs.jumpsec.com/a-defenders-guide-for-rootkit-detection-episode-1-kernel-drivers/) -> Rootkits have been one of the most sophisticated and successful ways of obtaining persistence on a machine, and now in 2020 there are ever more trivial ways of escalating from system to kernel.
 * [Web Cisco Talos Intelligence: Exploring malicious Windows drivers (Part 1), Introduction to the kernel and drivers](https://blog.talosintelligence.com/exploring-malicious-windows-drivers-part-1-introduction-to-the-kernel-and-drivers/) -> Drivers have long been of interest to threat actors, whether they are exploiting vulnerable drivers or creating malicious ones. Malicious drivers are difficult to detect and successfully leveraging one can give an attacker full access to a system.
-* [Web Cisco Talos Intelligence: Exploring malicious Windows drivers (Part 2), the I/O system, IRPs, stack locations, IOCTLs and more](https://blog.talosintelligence.com/exploring-malicious-windows-drivers-part-2/) -> As the second entry in our Exploring malicious Windows drivers series, we will continue where the first left off: Discussing the I/O system and IRPs. 
+* [Web Cisco Talos Intelligence: Exploring malicious Windows drivers (Part 2), the I/O system, IRPs, stack locations, IOCTLs and more](https://blog.talosintelligence.com/exploring-malicious-windows-drivers-part-2/) -> As the second entry in our Exploring malicious Windows drivers series, we will continue where the first left off: Discussing the I/O system and IRPs.
 * [Web OpenSecurityTraining: Rootkits - What they are and how to find them part 1](https://opensecuritytraining.info/Rootkits_files/Rootkits-Part1.ppt.pdf) -> Hooking.
 * [Web OpenSecurityTraining: Rootkits - What they are and how to find them part 2](https://opensecuritytraining.info/Rootkits_files/Rootkits-Part2.ppt.pdf) -> System Calls.
 * [Web OpenSecurityTraining: Rootkits - What they are and how to find them part 3](https://opensecuritytraining.info/Rootkits_files/Rootkits-Part3.ppt.pdf) -> Forensic Analysis.
 * [Web ESET: Modern Trends of Kernel-Mode Rootkits](https://www.eset.com/fileadmin/eset/US/resources/docs/white-papers/white-papers-defeating-x-64-modern-trends-of-kernel-mode-rootkits.pdf)
+* [Blog: Linux Rootkits Part 1 - Introduction and Workflow](https://xcellerator.github.io/posts/linux_rootkits_01/) -> Learning about Linux rootkits is a great way to learn more about how the kernel works. What's great about it is that, unless you really understand what the kernel is doing, your rootkit is unlikely to work, so it serves as a fantasic verifier.
 
 
 <div id='rootkits-videos'/>
@@ -1018,14 +1094,17 @@ Watch these videos to understand how to develop this malware with advanced featu
 * [Presentation: BlackHat USA 2020 - Demystifying Modern Windows Rootkits](https://i.blackhat.com/USA-20/Wednesday/us-20-Demirkapi-Demystifying-Modern-Windows-Rootkits.pdf)
 * [Youtube Video: BlackHat USA 2020 - Demystifying Modern Windows Rootkits](https://www.youtube.com/watch?v=ZASsIpdumcY) -> This talk will demystify the process of writing a rootkit, moving past theory and instead walking the audience through the process of going from a driver that says "Hello World" to a driver that abuses never-before-seen hooking methods to control the user-mode network stack.
 * [Youtube Video: BlackHat USA 2020 - The Art of Emulating Kernel Rootkits](https://www.youtube.com/watch?v=Zh_Dfd-ukEQ) -> Kernel rootkit is considered the most dangerous malware that may infect computers. Operating at ring 0, the highest privilege level in the system, this super malware has unrestricted power to control the whole machine, thus can defeat all the defensive and monitoring mechanisms.
+* [Youtube Video: (Spanish) RootedCON 2025 - From Deep Within the Kernel, How to Build an Invisible Rootkit on Windows (ES)](https://www.youtube.com/watch?v=W7jj1e30ADU)
 
 
 <div id='rootkits-analysis'/>
 
 ### ***Analysis***
 
+* [Web Avast: Lazarus and the FudModule Rootkit: Beyond BYOVD with an Admin-to-Kernel Zero-Day](https://decoded.avast.io/janvojtesek/lazarus-and-the-fudmodule-rootkit-beyond-byovd-with-an-admin-to-kernel-zero-day/) -> When it comes to Windows security, there is a thin line between admin and kernel. Microsoft's security servicing criteria have long asserted that "[a]dministrator-to-kernel is not a security boundary", meaning that Microsoft reserves the right to patch admin-to-kernel vulnerabilities at its own discretion. As a result, the Windows security model does not guarantee that it will prevent an admin-level attacker from directly accessing the kernel. This isn't just a theoretical concern. In practice, attackers with admin privileges frequently achieve kernel-level access by exploiting known vulnerable drivers, in a technique called BYOVD (Bring Your Own Vulnerable Driver).
 * [Web Avast: DirtyMoe - Code Signing Certificate](https://decoded.avast.io/martinchlumecky/dirtymoe-3/) -> The DirtyMoe malware uses a driver signed with a revoked certificate that can be seamlessly loaded into the Windows kernel. Therefore, one of the goals is to analyze how Windows works with a code signature of Windows drivers.
-* [Web CrowdStrike: Leftover Lunch - Finding, Hunting and Eradicating Spicy Hot Pot, a Persistent Browser Hijacking Rootkit](https://www.crowdstrike.com/en-us/blog/spicy-hot-pot-rootkit-explained/) -> In this blog, we take a look at a recent incident that involved a persistent browser hijacking rootkit dubbed “Spicy Hot Pot.” The name comes from Huorong (Tinder) Security, which first publicly reported on its discovery of this rootkit.
+* [Web CrowdStrike: Leftover Lunch - Finding, Hunting and Eradicating Spicy Hot Pot, a Persistent Browser Hijacking Rootkit](https://www.crowdstrike.com/en-us/blog/spicy-hot-pot-rootkit-explained/) -> In this blog, we take a look at a recent incident that involved a persistent browser hijacking rootkit dubbed "Spicy Hot Pot". The name comes from Huorong (Tinder) Security, which first publicly reported on its discovery of this rootkit.
+* [Blog: Analyzing IranuKit: A modular Linux kernel rootkit](https://humzak711.github.io/analyzing_IranuKit.html) -> While hanging out on the Rootkit Researchers Discord Server, Matheuz discovered an open directory containing some intriguing malware samples. Among these were a bootkit, two kernel modules (dropper.ko and rootkit_loader.ko), and a shared library named systemdInjector.so.
 
 
 <div id='rootkits-source-code'/>
@@ -1034,7 +1113,12 @@ Watch these videos to understand how to develop this malware with advanced featu
 
 Complex examples of this malware.
 
-* [Github: Benthic](https://github.com/TheMalwareGuardian/Benthic) -> Benthic is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits. By offering a centralized repository of knowledge, Benthic stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
+
+<div id='rootkits-source-code-windows'/>
+
+#### ***Windows***
+
+* [Github: Benthic Windows Kernel Rootkit](https://github.com/TheMalwareGuardian/Benthic) -> Benthic is a comprehensive project thoroughly designed with the explicit goal of establishing a robust foundation for the development of rootkits. By offering a centralized repository of knowledge, Benthic stands as a valuable initiative for anyone looking to contribute to and benefit from the collective understanding of this field.
 * [Github: Nidhogg](https://github.com/Idov31/Nidhogg) -> Nidhogg is a multi-functional rootkit to showcase the variety of operations that can be done from kernel space. The goal of Nidhogg is to provide an all-in-one and easy-to-use rootkit with multiple helpful functionalities for operations. Besides that, it can also easily be integrated with your C2 framework.
 * [Github: Black Angel](https://github.com/XaFF-XaFF/Black-Angel-Rootkit) -> lack Angel is a Windows 11/10 x64 kernel mode rootkit. Rootkit can be loaded with enabled DSE while maintaining its full functionality.
 * [Github: Cronos](https://github.com/XaFF-XaFF/Cronos-Rootkit) -> Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes, protect and elevate them with token manipulation.
@@ -1042,11 +1126,24 @@ Complex examples of this malware.
 * [Github: Sunder](https://github.com/ColeHouston/Sunder) -> Windows rootkit modeled after Lazarus Group's FudModule rootkit. Reference this version of Sunder for an example of the appid.sys driver exploit, which was utilized by Lazarus Group FudModule rootkit. Sunder's vulnerable driver in this GitHub repository is Dell's dbutil_2_3.sys driver, since it is a simple vulnerability and therefore makes the rootkit-specific code easier to read. This driver is blocked by Microsoft.
 * [Blog: Eagle](https://memn0ps.github.io/rusty-windows-kernel-rootkit/) -> This post will go through some of the basic rootkit techniques, using one of the first publicly available rootkits made in Rust as a proof of concept. Many anti-cheats and EDRs are utilizing Windows kernel drivers using rootkit-like techniques to detect game hackers or adversaries. However, this is a cat and mouse game, and the game hackers and malware authors have been years ahead of the industry. Why was this made? For fun, learning, to demonstrate the power of Rust and because Rust is awesome. This post assumes that the reader understands the basics of how Windows Kernel programming and how device drivers work.
 * [Github: Eagle](https://github.com/memN0ps/rootkit-rs/) -> Windows Kernel Rookit in Rust (Rusty Rootkit).
+* [Github: Banshee](https://github.com/eversinc33/Banshee) -> Experimental Windows x64 Kernel Rootkit with anti-rootkit evasion features.
 * [Github: ZwHawk](https://github.com/eLoopWoo/zwhawk) -> A kernel rootkit with remote command and control interface for windows.
 * [Github: www.rootkit.com mirror](https://github.com/skykami/www.rootkit.com) -> www.rootkit.com users section mirror, sql database dump, and a few other files/rootkits.
 * [Github: TDL (Turla Driver Loader)](https://github.com/hfiref0x/TDL) -> Driver loader for bypassing Windows x64 Driver Signature Enforcement.
 * [Github: Autochk Rootkit](https://github.com/repnz/autochk-rootkit) -> Reverse engineered source code of the autochk rootkit.
+
+
+<div id='rootkits-source-code-linux'/>
+
+#### ***linux***
+
+* [Github: Collection of Linux Rootkit codes](https://github.com/MatheuZSecurity/Rootkit)
 * [Github: Reptile](https://github.com/f0rb1dd3n/Reptile) -> LKM Linux rootkit.
+* [Github: KoviD](https://github.com/carloslack/KoviD) -> Red-Team Linux kernel rootkit.
+* [Github: BDS LKM FTRACE ROOTKIT](https://github.com/bluedragonsecurity/bds_lkm_ftrace) -> Ftrace Based Linux Loadable Kernel Module Rootkit for Linux Kernel 5.x and 6.x on x86_64, hides files, hides process, hides bind shell & reverse shell port, privilege escalation, cleans up logs and bash history during installation.
+* [Github: Medusa](https://github.com/ldpreload/Medusa) -> Medusa is a powerful, stealthy, versatile, and, modular rootkit designed to give attackers complete control over Linux systems. Medusa is compiled and ready to be executed as a small ELF executable file, which no means extra building or configuration requirements! Medusa is larger than a few hundred kilobytes in size. Once installed, the rootkit sets up a dynamic linker that modifies the way applications are loaded and executed on the system. At this point the Medusa hooks a plethora of API system calls, library functions and signal handlers to achieve imbreakable and uninterceptable persistence.
+* [Github: ebpfkit](https://github.com/Gui774ume/ebpfkit) -> ebpfkit is a rootkit that leverages multiple eBPF features to implement offensive security techniques. We implemented most of the features you would expect from a rootkit: obfuscation techniques, container breakouts, persistent access, command and control, pivoting, network scanning, Runtime Application Self-Protection (RASP) bypass, etc.
+* [Github: Rootkit - Loadable Kernel Module](https://github.com/x90613/Linux-Rootkit-LKM) -> It's a simple rootkit and provide the following functions: (1) hide/unhide module (2) masquerade process name (3) hook/unhook syscall
 
 
 <div id='rootkits-techniques'/>
@@ -1086,7 +1183,7 @@ Installation, bfuscation and persistence techniques applied by this malware.
 * [Presentation: BlackHat USA 2004 - DKOM (Direct Kernel Object Manipulation)](https://www.blackhat.com/presentations/bh-europe-04/bh-eu-04-butler.pdf)
 * [Youtube Video: BlackHat USA 2004 - DKOM (Direct Kernel Object Manipulation)](https://www.youtube.com/watch?v=1Ie20b5IGgY)
 * [Web NixHacker: Understanding Windows DKOM techniques](https://nixhacker.com/understanding-windows-dkom-direct-kernel-object-manipulation-attacks-eprocess/) -> The Windows Kernel uses the EPROCESS structure to represent a process, and it contains all the information that the kernel needs to maintain about the process.
-* [Blog: Direct Kernel Object Manipulation and Processes](https://bsodtutorials.wordpress.com/2014/01/27/rootkits-direct-kernel-object-manipulation-and-processes/) -> DKOM is one of the methods commonly used and implemented by Rootkits, in order to remain undetected, since this the main purpose of a roottkit. To be able to access Kernel-Mode code and data structures without detection from security programs or tools used by security analysts and researchers. 
+* [Blog: Direct Kernel Object Manipulation and Processes](https://bsodtutorials.wordpress.com/2014/01/27/rootkits-direct-kernel-object-manipulation-and-processes/) -> DKOM is one of the methods commonly used and implemented by Rootkits, in order to remain undetected, since this the main purpose of a roottkit. To be able to access Kernel-Mode code and data structures without detection from security programs or tools used by security analysts and researchers.
 
 
 <div id='rootkits-techniques-dkom-pocs'/>
@@ -1122,7 +1219,7 @@ Installation, bfuscation and persistence techniques applied by this malware.
 ##### ***Basics***
 
 * [Web Microsoft: Windows Filtering Platform](https://learn.microsoft.com/en-us/windows/win32/fwp/windows-filtering-platform-start-page) -> Windows Filtering Platform (WFP) is a set of API and system services that provide a platform for creating network filtering applications. The WFP API allows developers to write code that interacts with the packet processing that takes place at several layers in the networking stack of the operating system. Network data can be filtered and also modified before it reaches its destination.
-* [Web Scorpio Software: Introduction to the Windows Filtering Platform](https://scorpiosoftware.net/2022/12/25/introduction-to-the-windows-filtering-platform/) -> As part of the second edition of Windows Kernel Programming, I’m working on chapter 13 to describe the basics of the Windows Filtering Platform (WFP). The chapter will focus mostly on kernel-mode WFP Callout drivers (it is a kernel programming book after all), but I am also providing a brief introduction to WFP and its user-mode API.
+* [Web Scorpio Software: Introduction to the Windows Filtering Platform](https://scorpiosoftware.net/2022/12/25/introduction-to-the-windows-filtering-platform/) -> As part of the second edition of Windows Kernel Programming, I'm working on chapter 13 to describe the basics of the Windows Filtering Platform (WFP). The chapter will focus mostly on kernel-mode WFP Callout drivers (it is a kernel programming book after all), but I am also providing a brief introduction to WFP and its user-mode API.
 * [Github: WFP Explorer](https://github.com/zodiacon/wfpexplorer) -> GUI tool to view Windows Filtering Platform objects (WIP).
 
 
@@ -1181,6 +1278,27 @@ Installation, bfuscation and persistence techniques applied by this malware.
 * [Github: Minivers File System Minifilter Driver](https://github.com/guidoreina/minivers) -> Windows file system minifilter driver which generates backup copies of certain files before they change.
 
 
+<div id='rootkits-techniques-callbacks'/>
+
+#### ***Remove Callbacks***
+
+
+<div id='rootkits-techniques-callbacks-basics'/>
+
+##### ***Basics***
+
+* [Blog: Removing Kernel Callbacks Using Signed Drivers](https://br-sn.github.io/Removing-Kernel-Callbacks-Using-Signed-Drivers/)
+
+
+<div id='rootkits-techniques-callbacks-pocs'/>
+
+##### ***PoCs***
+
+* [Github: Kernel Callbacks Removal (Bypassing EDR Detections)](https://github.com/V-i-x-x/kernel-callback-removal)
+* [Github: RealBlindingEDR](https://github.com/myzxcg/RealBlindingEDR) -> Remove AV/EDR Kernel ObRegisterCallbacks, CmRegisterCallback, MiniFilter Callback, PsSetCreateProcessNotifyRoutine Callback, PsSetCreateThreadNotifyRoutine Callback, PsSetLoadImageNotifyRoutine Callback, etc.
+* [Github: STFUEDR](https://github.com/lawiet47/STFUEDR) -> Silence EDRs by removing kernel callbacks.
+
+
 <div id='rootkits-techniques-certificates'/>
 
 #### ***Forge Signature Timestamps***
@@ -1214,7 +1332,7 @@ Installation, bfuscation and persistence techniques applied by this malware.
 * [Github: Windows x86 Interrupt Descriptor Table (IDT) hooking driver](https://gist.github.com/Barakat/89002a26937a2da353868fc5130812a5)
 * [Github: IDTHOOK](https://github.com/LLLZed/IDTHOOK)
 * [Github: x64-IDT-HOOK](https://github.com/haidragon/x64-IDT-HOOK)
-* [Github: IDTHook_X64](https://github.com/DOGSHITD/IDTHook_X64) - > Hook IDT vector 0xb2 to detect SCI in 64bit windows. 
+* [Github: IDTHook_X64](https://github.com/DOGSHITD/IDTHook_X64) - > Hook IDT vector 0xb2 to detect SCI in 64bit windows.
 
 
 <div id='rootkits-techniques-ssdthooking'/>
@@ -1250,9 +1368,11 @@ Rootkit scanners.
 * [Web Microsoft: RootkitRevealer v1.71](https://learn.microsoft.com/en-us/sysinternals/downloads/rootkit-revealer) -> RootkitRevealer is an advanced rootkit detection utility. It runs on Windows XP (32-bit) and Windows Server 2003 (32-bit), and its output lists Registry and file system API discrepancies that may indicate the presence of a user-mode or kernel-mode rootkit. RootkitRevealer successfully detects many persistent rootkits including AFX, Vanquish and HackerDefender (note: RootkitRevealer is not intended to detect rootkits like Fu that don't attempt to hide their files or registry keys). If you use it to identify the presence of a rootkit please let us know!
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='environment'/>
@@ -1298,9 +1418,11 @@ Build an environment to develop Rootkits (Kernel Mode Drivers).
 * [Web Microsoft: Other WDK downloads](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads) -> The Windows Driver Kit (WDK) is used to develop, test, and deploy Windows Drivers. This topic contains information about versions of the Windows Driver Kit (WDK), Enterprise WDK (EWDK), and additional downloads for support purposes. To develop drivers, use the latest public versions of the Windows Driver Kit (WDK) and tools, available for download on Download the Windows Driver Kit (WDK).
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='cybersecurity-resources'/>
@@ -1325,9 +1447,11 @@ Additional cybersecurity resources that will assist you in developing bootkits/r
 * [Web Red Team Notes](https://www.ired.team/) -> These are notes about all things focusing on, but not limited to, red teaming and offensive security.
 * [Web Book HackTricks](https://book.hacktricks.xyz/) -> Welcome to the wiki where you will find each hacking trick/technique/whatever I have learnt from CTFs, real life apps, reading researches, and news.
 * [Github: Awesome RedTeam Cheatsheet](https://github.com/RistBS/Awesome-RedTeam-Cheatsheet) -> Red Team Cheatsheet in constant expansion.
+* [Github: PANIX - Persistence Against *NIX](https://github.com/Aegrah/PANIX) -> PANIX is a powerful, modular, and highly customizable Linux persistence framework designed for security researchers, detection engineers, penetration testers, CTF enthusiasts, and more. Built with versatility in mind, PANIX emphasizes functionality, making it an essential tool for understanding and implementing a wide range of persistence techniques.
 * [Github: Awesome UEFI Security](https://github.com/river-li/awesome-uefi-security) -> A collection of papers/tools/exploits for UEFI security.
 * [Web SamsClass Info: Full-Stack Incident Response](https://samsclass.info/152/FSIR2021.htm) -> Sam Bowne.
 * [Github: Awesome EDR Bypass](https://github.com/tkmru/awesome-edr-bypass) -> EDR bypass technology is not just for attackers. Many malware now have EDR bypass capabilities, knowledge that pentesters and incident responders should also be aware of. This repository is not intended to be used to escalate attacks. Use it for ethical hacking.
+* [Github: EDR & AV Bypass Arsenal](https://github.com/vvswift/Bypass-Protection0x00) -> Comprehensive collection of tools, patches, and techniques for evading modern EDR, AV, and other defenses. All the tools in this repository are a collection that continues to grow, the author's contacts are listed on the inside of each tool if possible.
 * [Github: Hooking](https://github.com/alphaSeclab/hooking/blob/master/Readme_en.md) -> Resources About Hooking. For All Platforms. Currently 300+ Tools And 600+ Posts.
 * [Github: Awesome Industrial Control System Security](https://github.com/hslatman/awesome-industrial-control-system-security) -> A curated list of resources related to Industrial Control System (ICS) security.
 * [Github: Awesome Honeypots](https://github.com/paralax/awesome-honeypots) -> A curated list of awesome honeypots, plus related components and much more, divided into categories such as Web, services, and others, with a focus on free and open source projects.
@@ -1345,9 +1469,11 @@ Additional cybersecurity resources that will assist you in developing bootkits/r
 * [Github: Awesome Interviews](https://github.com/DopplerHQ/awesome-interview-questions) -> A curated awesome list of lists of interview questions.
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='books'/>
@@ -1366,9 +1492,11 @@ Key readings to excel in this field.
 * [Evading EDR: The Definitive Guide to Defeating Endpoint Detection Systems -  Matt Hand - No Starch Press. (≈$50)](https://www.amazon.es/dp/1718503342) -> EDR, demystified! Stay a step ahead of attackers with this comprehensive guide to understanding the attack-detection software running on Microsoft systems-and how to evade it.
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='courses'/>
@@ -1377,16 +1505,22 @@ Key readings to excel in this field.
 
 Courses related to this subject.
 
-* [Course Zero2Auto: Malware Analysis (≈$150)](https://courses.zero2auto.com/adv-malware-analysis-course) -> Developed for those looking to further enhance their skills in the Malware Analysis/Reverse Engineering field.
-* [Web Zero Day Engineering: Zero Day Vulnerability Research Training (≈$1600)](http://zerodayengineering.com/training/universal-vulnerability-research.html) -> This 4-day intensive training will expose you to full stack essentials of vulnerability research and exploit development, starting from (almost) zero pre-requisites. The training system consolidates all the foundational knowledge and basic skills that you will need to build upon later as you advance and specialize in the field. Created and taught live by a top vulnerability researcher and binary hacker.
+* [Web OpenSecurityTraining2: Debuggers, Reverse Engineering, Exploitation (≈$Free)](https://p.ost2.fyi/courses)
 * [Web TrainSec: Windows Internals and Programming (≈$50-$900)](https://training.trainsec.net/windows-internals-and-programming)
 * [Course ZeroPointSecurity: Offensive Driver Development (≈$55)](https://training.zeropointsecurity.co.uk/courses/offensive-driver-development) -> Learn how to set up a development testing environment for writing Windows kernel-mode drivers using Hyper-V, WinDbg, and Visual Studio. Cover the basic anatomy of a driver from loading and unloading, I/O control codes, interaction from userland, and kernel debugging.
-* [Web Maldev Academy (≈$500)](https://maldevacademy.com/) -> Maldev Academy is a comprehensive malware development course that focuses on x64 malware development, providing knowledge from basic to advanced level. The course is primarily designed for individuals in offensive security, but it also caters to beginners who have no prior experience in malware development. 
+* [Web Maldev Academy (≈$500)](https://maldevacademy.com/) -> Maldev Academy is a comprehensive malware development course that focuses on x64 malware development, providing knowledge from basic to advanced level. The course is primarily designed for individuals in offensive security, but it also caters to beginners who have no prior experience in malware development.
+* [Course Zero2Auto: Malware Analysis (≈$150)](https://courses.zero2auto.com/adv-malware-analysis-course) -> Developed for those looking to further enhance their skills in the Malware Analysis/Reverse Engineering field.
+* [Web Zero Day Engineering: Zero Day Vulnerability Research Training (≈$1600)](http://zerodayengineering.com/training/universal-vulnerability-research.html) -> This 4-day intensive training will expose you to full stack essentials of vulnerability research and exploit development, starting from (almost) zero pre-requisites. The training system consolidates all the foundational knowledge and basic skills that you will need to build upon later as you advance and specialize in the field. Created and taught live by a top vulnerability researcher and binary hacker.
+* [Web White Knight Labs: Offensive Development Practitioner Certification (ODPC) (≈$1000)](https://training.whiteknightlabs.com/certifications/offensive-development-practitioner-certification/) -> An intermediate-level, on-demand course meticulously crafted for cybersecurity professionals looking to elevate their offensive security skills.
+* [Web Dark Vortex: Malware On Steroids (≈$2500)](https://0xdarkvortex.dev/training-programs/malware-on-steroids/) -> The Malware On Steroids is the first course which is dedicated to building your own C2 Infrastructure and Payload. There are a lot of courses which focus on exploitation, reversing and other offensive stuff, but none of them focus on how you can build your own Command & Control Infra. This course focuses on a brief introduction towards Windows Internals followed by a full hands-on course on building a Command & Control architecture with different types of Initial Access payloads.
+* [Web Red Team Leaders: AV/EDR Evasion Practical Techniques (≈$10)](https://courses.redteamleaders.com/catalog) -> Advanced techniques to bypass modern Antivirus and EDR solutions through real-world offensive development strategies.
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='mastersdegree'/>
@@ -1397,15 +1531,17 @@ If you wish to acquire this knowledge, along with other topics related to malwar
 
 
 <p align="center">
-<span style="vertical-align: middle;">
-	<img src="Images/Master_Degree_Entities.png">
-</span>
+	<span style="vertical-align: middle;">
+		<img src="Images/Master_Degree_Entities.png" width="80%">
+	</span>
 </p>
 
 
+
 ---
 ---
 ---
+
 
 
 <div id='contact'/>
