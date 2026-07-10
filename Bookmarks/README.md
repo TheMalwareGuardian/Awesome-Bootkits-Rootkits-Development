@@ -31,8 +31,8 @@ To use this script, you need to have Python installed on your system. If you don
 	```
 	python generate_bookmarks.py
 
-	The bookmarks file is located at: C:\Awesome-Bootkits-Rootkits-Development\bookmarks\bookmarks.html
-	477 links have been added to the bookmarks.
+	The bookmarks file is located at: C:\Awesome-Bootkits-Rootkits-Development\Bookmarks\bookmarks.html
+	490 links have been added to the bookmarks.
 	```
 
 - View the Generated Bookmarks
