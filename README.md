@@ -1,6 +1,6 @@
-# 🏴‍☠️ Awesome Bootkits & Rootkits Development
+# ***🏴‍☠️ Awesome Bootkits & Rootkits Development***
 
-![DEF CON 33 Main Stage Talk](https://img.shields.io/badge/DEF%20CON%2033-Main%20Stage%20Talk-informational?style=for-the-badge&logo=hackaday)
+![DEF CON 33 Main Stage Talk](https://img.shields.io/badge/DEF%20CON%2033-Main%20Stage%20Talk-informational?style=for-the-badge&logo=hackaday) ![La Villa Hacker](https://img.shields.io/badge/DEF%20CON%2034-La%20Villa%20Hacker-red?style=for-the-badge&logo=hackaday)
 
 A curated compilation of extensive resources dedicated to bootkit and rootkit development.
 
